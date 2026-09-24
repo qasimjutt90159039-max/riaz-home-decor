@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node preview/server.js",
     "preview": "node preview/server.js",
+    "build": "echo 'Theme ready for deployment'",
     "package": "node scripts/package-theme.js"
   },
   "keywords": [
