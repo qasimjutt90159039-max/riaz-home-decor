@@ -1,106 +1,11 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "^/$",
-      "dest": "/preview/index.html"
-    },
-    {
-      "src": "^/index(\\.html)?$",
-      "dest": "/preview/index.html"
-    },
-    {
-      "src": "^/shop(\\.html)?$",
-      "dest": "/preview/shop.html"
-    },
-    {
-      "src": "^/lighting(\\.html)?$",
-      "dest": "/preview/lighting.html"
-    },
-    {
-      "src": "^/fanoos(\\.html)?$",
-      "dest": "/preview/fanoos.html"
-    },
-    {
-      "src": "^/chandeliers(\\.html)?$",
-      "dest": "/preview/chandeliers.html"
-    },
-    {
-      "src": "^/lamps(\\.html)?$",
-      "dest": "/preview/lamps.html"
-    },
-    {
-      "src": "^/home-decor(\\.html)?$",
-      "dest": "/preview/home-decor.html"
-    },
-    {
-      "src": "^/cart(\\.html)?$",
-      "dest": "/preview/cart.html"
-    },
-    {
-      "src": "^/wishlist(\\.html)?$",
-      "dest": "/preview/wishlist.html"
-    },
-    {
-      "src": "^/about(\\.html)?$",
-      "dest": "/preview/about.html"
-    },
-    {
-      "src": "^/contact(\\.html)?$",
-      "dest": "/preview/contact.html"
-    },
-    {
-      "src": "^/faq(\\.html)?$",
-      "dest": "/preview/faq.html"
-    },
-    {
-      "src": "^/shipping(\\.html)?$",
-      "dest": "/preview/shipping.html"
-    },
-    {
-      "src": "^/returns(\\.html)?$",
-      "dest": "/preview/returns.html"
-    },
-    {
-      "src": "^/login(\\.html)?$",
-      "dest": "/preview/login.html"
-    },
-    {
-      "src": "^/register(\\.html)?$",
-      "dest": "/preview/register.html"
-    },
-    {
-      "src": "^/account(\\.html)?$",
-      "dest": "/preview/account.html"
-    },
-    {
-      "src": "^/collections/all$",
-      "dest": "/preview/shop.html"
-    },
-    {
-      "src": "^/collections/(.*)",
-      "dest": "/preview/shop.html"
-    },
-    {
-      "src": "^/pages/(.*)",
-      "dest": "/preview/$1.html"
-    },
-    {
-      "src": "^/products/product-vase",
-      "dest": "/preview/product-vase.html"
-    },
-    {
-      "src": "^/products/(.*)",
-      "dest": "/preview/product-fanoos.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/preview/$1"
-    }
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/collections/:path*", "destination": "/shop.html" },
+    { "source": "/products/product-vase", "destination": "/product-vase.html" },
+    { "source": "/products/:path*", "destination": "/product-fanoos.html" },
+    { "source": "/pages/:slug", "destination": "/$slug.html" }
   ]
 }
