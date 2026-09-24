@@ -1,0 +1,37 @@
+{%- if section.settings.show_announcement -%}
+  <div class="announcement-bar" role="region" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <span>{{ section.settings.text }}</span>
+      {%- if section.settings.phone != blank -%}
+        <span class="announcement-dot"></span>
+        <span>Showroom: <a href="tel:{{ section.settings.phone }}" style="text-decoration: underline;">{{ section.settings.phone }}</a></span>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_announcement",
+      "label": "Show announcement",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Announcement Text",
+      "default": "Illuminate Your Space"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Showroom Phone",
+      "default": "+92 300 7490606"
+    }
+  ]
+}
+{% endschema %}

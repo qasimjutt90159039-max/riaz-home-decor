@@ -1,0 +1,87 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Riaz Home Decor Showroom",
+    "theme_version": "1.0.0",
+    "theme_author": "Riaz Home Decor Fanoos Light & Decor",
+    "theme_documentation_url": "https://help.shopify.com",
+    "theme_support_url": "https://help.shopify.com"
+  },
+  {
+    "name": "Colors & Showroom Palette",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_ivory",
+        "label": "Warm Ivory Background",
+        "default": "#FBF9F5"
+      },
+      {
+        "type": "color",
+        "id": "color_charcoal",
+        "label": "Charcoal Black Surface / Text",
+        "default": "#141413"
+      },
+      {
+        "type": "color",
+        "id": "color_bronze",
+        "label": "Deep Bronze Metallic Accent",
+        "default": "#8C7355"
+      },
+      {
+        "type": "color",
+        "id": "color_sand",
+        "label": "Soft Sand Neutral Surface",
+        "default": "#EAE4D9"
+      },
+      {
+        "type": "color",
+        "id": "color_terracotta",
+        "label": "Muted Terracotta Accent / Sale",
+        "default": "#A85A42"
+      }
+    ]
+  },
+  {
+    "name": "Store Verification & Contact",
+    "settings": [
+      {
+        "type": "text",
+        "id": "business_name",
+        "label": "Business Name",
+        "default": "Riaz Home Decor Fanoos Light & Decor"
+      },
+      {
+        "type": "text",
+        "id": "business_address",
+        "label": "Showroom Address",
+        "default": "Bosan Road, Sabzazar Colony, Multan, Punjab, Pakistan"
+      },
+      {
+        "type": "text",
+        "id": "business_phone",
+        "label": "Showroom Phone",
+        "default": "+92 300 7490606"
+      }
+    ]
+  },
+  {
+    "name": "Social Media Links",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Social media icons will ONLY display on the website when valid URLs are provided below. Leave empty to hide."
+      },
+      {
+        "type": "url",
+        "id": "social_facebook_link",
+        "label": "Facebook Page URL"
+      },
+      {
+        "type": "url",
+        "id": "social_instagram_link",
+        "label": "Instagram Profile URL"
+      }
+    ]
+  }
+]

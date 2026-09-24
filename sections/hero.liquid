@@ -1,0 +1,85 @@
+<section class="hero-section" aria-label="Showroom Hero">
+  <div class="hero-background-media">
+    <img src="{{ section.settings.image | default: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=2000&q=85' }}" 
+         alt="{{ section.settings.headline | escape }}"
+         loading="eager"
+         fetchpriority="high">
+  </div>
+  <div class="hero-vignette"></div>
+
+  <div class="container" style="position: relative; z-index: 3;">
+    <div class="hero-content">
+      <div class="hero-tagline">
+        <span class="announcement-dot" style="background-color: var(--color-bronze-light);"></span>
+        <span>Modern Lighting Gallery & Home Decor</span>
+      </div>
+
+      <h1 class="hero-headline">{{ section.settings.headline | default: 'Light Changes Everything' }}</h1>
+
+      <p class="hero-supporting">
+        {{ section.settings.supporting_text | default: 'Discover lighting and home decor pieces designed to bring atmosphere, warmth and character to your space.' }}
+      </p>
+
+      <div class="hero-actions">
+        <a href="{{ section.settings.button_1_link | default: '/pages/lighting' }}" class="btn btn-primary">
+          {{ section.settings.button_1_text | default: 'Explore Lighting' }}
+        </a>
+        <a href="{{ section.settings.button_2_link | default: '/pages/home-decor' }}" class="btn btn-outline-light">
+          {{ section.settings.button_2_text | default: 'Shop Decor' }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero - Dark Showroom",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Light Changes Everything"
+    },
+    {
+      "type": "textarea",
+      "id": "supporting_text",
+      "label": "Supporting Text",
+      "default": "Discover lighting and home decor pieces designed to bring atmosphere, warmth and character to your space."
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "First Button Text",
+      "default": "Explore Lighting"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "First Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Second Button Text",
+      "default": "Shop Decor"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Second Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Background Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero - Dark Showroom"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,71 @@
+<section class="section" aria-label="Wall Lighting Editorial">
+  <div class="container">
+    <div class="wall-lighting-banner">
+      <div>
+        <span class="section-eyebrow">Vertical Illumination</span>
+        <h2 class="editorial-title" style="font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 1rem;">
+          {{ section.settings.headline | default: 'Bring the Walls to Life' }}
+        </h2>
+        <p class="section-subtext">
+          Wall lighting creates depth and rhythm, turning blank vertical surfaces into warm architectural canvases.
+        </p>
+
+        <div class="wall-categories-list">
+          <a href="/collections/wall-lights" class="wall-cat-item">
+            <span class="wall-cat-dot"></span>
+            <div>
+              <strong style="display: block; font-family: var(--font-serif); font-size: 1.15rem;">Wall Sconces</strong>
+              <span style="font-size: 0.8125rem; color: var(--color-text-muted);">Bi-directional wash of ambient light for corridors and headboards</span>
+            </div>
+          </a>
+
+          <a href="/collections/wall-lights" class="wall-cat-item">
+            <span class="wall-cat-dot"></span>
+            <div>
+              <strong style="display: block; font-family: var(--font-serif); font-size: 1.15rem;">Decorative Wall Lights</strong>
+              <span style="font-size: 0.8125rem; color: var(--color-text-muted);">Ornate brass, ribbed glass, and sculptural fluted fixtures</span>
+            </div>
+          </a>
+
+          <a href="/collections/wall-lights" class="wall-cat-item">
+            <span class="wall-cat-dot"></span>
+            <div>
+              <strong style="display: block; font-family: var(--font-serif); font-size: 1.15rem;">Modern Wall Lights</strong>
+              <span style="font-size: 0.8125rem; color: var(--color-text-muted);">Clean geometric silhouettes in patinated charcoal and bronze</span>
+            </div>
+          </a>
+        </div>
+
+        <a href="/collections/wall-lights" class="btn btn-primary">
+          Shop Wall Lighting →
+        </a>
+      </div>
+
+      <div style="position: relative; height: 100%; min-height: 420px; border-radius: var(--radius-subtle); overflow: hidden;">
+        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=80" 
+             alt="Wall Lighting Showroom Display" 
+             style="width: 100%; height: 100%; object-fit: cover;" 
+             loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Wall Lighting",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Bring the Walls to Life"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Wall Lighting"
+    }
+  ]
+}
+{% endschema %}

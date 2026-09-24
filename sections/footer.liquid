@@ -1,0 +1,135 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top-grid">
+      <!-- Store Information Column -->
+      <div>
+        <div class="header-brand">
+          <span class="brand-title" style="color: var(--color-white); font-size: 1.35rem;">Riaz Home Decor</span>
+          <span class="brand-subtitle" style="color: var(--color-bronze-light);">Fanoos Light & Decor</span>
+        </div>
+        <p class="footer-brand-desc">
+          Modern lighting gallery and contemporary home decor showroom based in Multan. Illuminating spaces with architectural warmth and character.
+        </p>
+
+        <div style="margin-top: 1.5rem;">
+          <div class="footer-contact-item">
+            {% render 'icon', icon: 'pin' %}
+            <span>Bosan Road, Sabzazar Colony, Multan, Punjab, Pakistan</span>
+          </div>
+          <div class="footer-contact-item">
+            {% render 'icon', icon: 'phone' %}
+            <a href="tel:+923007490606" style="color: inherit; text-decoration: underline;">+92 300 7490606</a>
+          </div>
+        </div>
+
+        {%- if section.settings.facebook_url != blank or section.settings.instagram_url != blank -%}
+          <div style="display: flex; gap: 1rem; margin-top: 1.25rem;">
+            {%- if section.settings.facebook_url != blank -%}
+              <a href="{{ section.settings.facebook_url }}" target="_blank" rel="noopener" style="color: var(--color-sand);">Facebook</a>
+            {%- endif -%}
+            {%- if section.settings.instagram_url != blank -%}
+              <a href="{{ section.settings.instagram_url }}" target="_blank" rel="noopener" style="color: var(--color-sand);">Instagram</a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <!-- Shop Column -->
+      <div>
+        <h4 class="footer-col-title">Shop</h4>
+        <ul class="footer-link-list">
+          <li><a href="/pages/lighting" class="footer-link">Lighting</a></li>
+          <li><a href="/collections/fanoos" class="footer-link">Fanoos</a></li>
+          <li><a href="/collections/chandeliers" class="footer-link">Chandeliers</a></li>
+          <li><a href="/collections/ceiling-lights" class="footer-link">Ceiling Lights</a></li>
+          <li><a href="/collections/wall-lights" class="footer-link">Wall Lights</a></li>
+          <li><a href="/collections/lamps" class="footer-link">Lamps</a></li>
+          <li><a href="/pages/home-decor" class="footer-link">Home Decor</a></li>
+        </ul>
+      </div>
+
+      <!-- Explore Column -->
+      <div>
+        <h4 class="footer-col-title">Explore</h4>
+        <ul class="footer-link-list">
+          <li><a href="/collections/new-arrivals" class="footer-link">New Arrivals</a></li>
+          <li><a href="/collections/all" class="footer-link">Collections</a></li>
+          <li><a href="/pages/about" class="footer-link">About Showroom</a></li>
+          <li><a href="/pages/contact" class="footer-link">Contact</a></li>
+          <li><a href="/pages/faq" class="footer-link">FAQ</a></li>
+          <li><a href="/pages/wishlist" class="footer-link">Wishlist</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Care Column -->
+      <div>
+        <h4 class="footer-col-title">Customer Care</h4>
+        <ul class="footer-link-list">
+          <li><a href="/pages/shipping" class="footer-link">Shipping Policy</a></li>
+          <li><a href="/pages/returns" class="footer-link">Returns & Refunds</a></li>
+          <li><a href="/pages/privacy" class="footer-link">Privacy Policy</a></li>
+          <li><a href="/pages/terms" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="/account/login" class="footer-link">Customer Account</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Column -->
+      <div>
+        <h4 class="footer-col-title">{{ section.settings.newsletter_title | default: 'Bring More Light Into Your Space' }}</h4>
+        <p style="font-size: 0.875rem; color: var(--color-text-light-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+          Sign up to receive curated lighting inspiration, new showroom arrivals and decor previews.
+        </p>
+        
+        {% form 'customer', class: 'footer-newsletter-form' %}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+            <input type="email" 
+                   name="contact[email]" 
+                   class="newsletter-input" 
+                   placeholder="Your email address" 
+                   required 
+                   aria-label="Email address">
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </div>
+          {%- if form.posted_successfully? -%}
+            <p style="color: var(--color-bronze-light); font-size: 0.8125rem; margin-top: 0.5rem;">Thank you for subscribing to our lighting updates.</p>
+          {%- endif -%}
+        {% endform %}
+      </div>
+    </div>
+
+    <!-- Bottom Credits & Disclaimers -->
+    <div class="footer-bottom">
+      <div>
+        &copy; {{ 'now' | date: '%Y' }} Riaz Home Decor Fanoos Light & Decor. All rights reserved.
+      </div>
+      <div>
+        Powered by Shopify &bull; Verified Store Location: Multan, Pakistan
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "newsletter_title",
+      "label": "Newsletter Title",
+      "default": "Bring More Light Into Your Space"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL (Leave blank to hide)"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL (Leave blank to hide)"
+    }
+  ]
+}
+{% endschema %}

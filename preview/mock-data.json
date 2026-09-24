@@ -1,0 +1,508 @@
+{
+  "store": {
+    "name": "Riaz Home Decor Fanoos Light & Decor",
+    "category": "Home Decor / Lighting Store",
+    "address": "Bosan Road, Sabzazar Colony, Multan, Punjab, Pakistan",
+    "phone": "+92 300 7490606",
+    "announcement": "Illuminate Your Space"
+  },
+  "products": [
+    {
+      "id": "prod-1",
+      "handle": "modern-fanoos-pendant",
+      "title": "Modern Fanoos Pendant",
+      "category": "Fanoos",
+      "type": "Lighting",
+      "room": "Living Room, Dining Room",
+      "price": 18500,
+      "compare_at_price": 22000,
+      "is_sale": true,
+      "featured_image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Fanoos", "Pendant", "Featured", "Sale", "Living Room"],
+      "description": "A refined architectural interpretation of classic oriental lanterns (Fanoos), sculpted in brushed brass and frosted ribbed glass. Casts warm ambient lighting with geometric shadows across formal living and dining spaces.",
+      "variants": [
+        {"id": "var-1-1", "title": "Brushed Matte Brass", "price": 18500},
+        {"id": "var-1-2", "title": "Patinated Antique Bronze", "price": 19500},
+        {"id": "var-1-3", "title": "Charcoal Black", "price": 18500}
+      ],
+      "metafields_lighting": {
+        "material": "Brushed Brass & Fluted Opal Glass",
+        "color": "Warm Amber & Satin Gold",
+        "finish": "Brushed Matte Brass / Hand Waxed",
+        "width": "32 cm",
+        "height": "55 cm",
+        "depth": "32 cm",
+        "weight": "3.8 kg",
+        "bulb_type": "E27 LED Filament",
+        "bulb_quantity": "1",
+        "wattage": "12W (60W Equivalent)",
+        "voltage": "220V - 240V (50Hz)",
+        "light_color": "2700K Warm Glow",
+        "room": "Living Room, Dining Room, Entryway",
+        "installation_type": "Ceiling Hardwired (Suspended Wire Adjustable up to 150cm)",
+        "care_instructions": "Dust gently with dry lint-free microfiber cloth. Avoid chemical glass sprays on metallic framework."
+      }
+    },
+    {
+      "id": "prod-2",
+      "handle": "contemporary-chandelier",
+      "title": "Contemporary Chandelier",
+      "category": "Chandeliers",
+      "type": "Lighting",
+      "room": "Living Room, Dining Room",
+      "price": 64000,
+      "compare_at_price": 75000,
+      "is_sale": true,
+      "featured_image": "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Chandeliers", "Statement", "Dining Room", "Living Room"],
+      "description": "A multi-tiered statement chandelier engineered with geometric deep bronze arms and frosted spherical glass diffusers, creating an expansive focal anchor for open double-height ceilings.",
+      "variants": [
+        {"id": "var-2-1", "title": "Deep Bronze / 12 Lights", "price": 64000},
+        {"id": "var-2-2", "title": "Warm Brass / 12 Lights", "price": 68000}
+      ],
+      "metafields_lighting": {
+        "material": "Forged Carbon Steel & Frosted Triplex Glass",
+        "color": "Deep Bronze & Frosted White",
+        "finish": "Satin Baked Bronze",
+        "width": "95 cm",
+        "height": "70 cm",
+        "depth": "95 cm",
+        "weight": "8.5 kg",
+        "bulb_type": "G9 LED Warm White",
+        "bulb_quantity": "12",
+        "wattage": "48W Total (350W Equivalent)",
+        "voltage": "220V - 240V",
+        "light_color": "3000K Soft Halogen Tone",
+        "room": "Living Room, Dining Room",
+        "installation_type": "Ceiling Mounted Hardwired with Extension Rods",
+        "care_instructions": "Power off circuit before cleaning. Wipe globes with a slightly damp soft cloth."
+      }
+    },
+    {
+      "id": "prod-3",
+      "handle": "decorative-ceiling-light",
+      "title": "Decorative Ceiling Light",
+      "category": "Ceiling Lights",
+      "type": "Lighting",
+      "room": "Bedroom, Entryway",
+      "price": 24000,
+      "compare_at_price": 0,
+      "is_sale": false,
+      "featured_image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Ceiling Lights", "New", "Bedroom", "Entryway"],
+      "description": "Flush-mount circular architectural luminaire featuring concentric spun metal rings and a diffuse inner halo for rooms requiring clean overhead clearance.",
+      "variants": [
+        {"id": "var-3-1", "title": "Sand & Champagne", "price": 24000},
+        {"id": "var-3-2", "title": "Charcoal Rim", "price": 24000}
+      ],
+      "metafields_lighting": {
+        "material": "Spun Aluminum & Optical PMMA Acrylic",
+        "color": "Soft Sand & Champagne Ring",
+        "finish": "Matte Powder Coated",
+        "width": "50 cm",
+        "height": "12 cm",
+        "depth": "50 cm",
+        "weight": "2.9 kg",
+        "bulb_type": "Integrated SMD LED Matrix",
+        "bulb_quantity": "Integrated Module",
+        "wattage": "36W",
+        "voltage": "220V - 240V",
+        "light_color": "Tri-Color Adjustable (3000K / 4000K / 6000K)",
+        "room": "Bedroom, Entryway, Corridor",
+        "installation_type": "Flush Ceiling Bracket Mount",
+        "care_instructions": "Wipe with dry feather duster or electrostatic cloth."
+      }
+    },
+    {
+      "id": "prod-4",
+      "handle": "minimal-pendant-light",
+      "title": "Minimal Pendant Light",
+      "category": "Pendant Lights",
+      "type": "Lighting",
+      "room": "Dining Room, Office",
+      "price": 14500,
+      "compare_at_price": 16500,
+      "is_sale": true,
+      "featured_image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Pendant Lights", "Minimalist", "Dining Room", "Office"],
+      "description": "Slender cylindrical pendant light in hand-finished blackened brass with a focused downward spotlight and subtle ambient side bleed.",
+      "variants": [
+        {"id": "var-4-1", "title": "Patinated Charcoal", "price": 14500},
+        {"id": "var-4-2", "title": "Raw Brushed Brass", "price": 15500}
+      ],
+      "metafields_lighting": {
+        "material": "Solid Machined Brass",
+        "color": "Charcoal Black Patina",
+        "finish": "Chemical Patination with Protective Wax",
+        "width": "8 cm",
+        "height": "45 cm",
+        "depth": "8 cm",
+        "weight": "1.7 kg",
+        "bulb_type": "GU10 High-CRI LED",
+        "bulb_quantity": "1",
+        "wattage": "7W (50W Halogen Equivalent)",
+        "voltage": "220V - 240V",
+        "light_color": "3000K Warm Spotlight",
+        "room": "Dining Island, Office, Reading Desk",
+        "installation_type": "Cord Suspended Ceiling Canopy",
+        "care_instructions": "Dust with dry rag. Do not use metal polishes on patinated finish."
+      }
+    },
+    {
+      "id": "prod-5",
+      "handle": "modern-wall-sconce",
+      "title": "Modern Wall Sconce",
+      "category": "Wall Lights",
+      "type": "Lighting",
+      "room": "Living Room, Bedroom, Entryway",
+      "price": 12800,
+      "compare_at_price": 0,
+      "is_sale": false,
+      "featured_image": "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Wall Lights", "New", "Living Room", "Bedroom"],
+      "description": "Minimalist dual-directional wall sconce casting geometric silhouettes upward and downward along textured plaster or stone walls.",
+      "variants": [
+        {"id": "var-5-1", "title": "Deep Bronze", "price": 12800},
+        {"id": "var-5-2", "title": "Ivory Powder Coat", "price": 12800}
+      ],
+      "metafields_lighting": {
+        "material": "Die-cast Aluminum Alloy",
+        "color": "Architectural Charcoal / Bronze",
+        "finish": "Textured Anodized Coating",
+        "width": "14 cm",
+        "height": "28 cm",
+        "depth": "10 cm",
+        "weight": "1.4 kg",
+        "bulb_type": "Dual COB Integrated LED",
+        "bulb_quantity": "2",
+        "wattage": "10W Total",
+        "voltage": "220V - 240V",
+        "light_color": "2800K Warm Atmospheric",
+        "room": "Living Room, Bedroom, Entryway",
+        "installation_type": "Direct Wall J-Box Mounting",
+        "care_instructions": "Clean surface with dry cloth."
+      }
+    },
+    {
+      "id": "prod-6",
+      "handle": "classic-table-lamp",
+      "title": "Classic Table Lamp",
+      "category": "Table Lamps",
+      "type": "Lighting",
+      "room": "Bedroom, Living Room, Office",
+      "price": 16200,
+      "compare_at_price": 19000,
+      "is_sale": true,
+      "featured_image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Table Lamps", "Lamps", "Sale", "Living Room", "Bedroom"],
+      "description": "Sculptural ceramic urn base in raw sand finish, paired with a custom oatmeal linen drum shade and solid turned brass finial.",
+      "variants": [
+        {"id": "var-6-1", "title": "Soft Sand Base / Linen Shade", "price": 16200},
+        {"id": "var-6-2", "title": "Terracotta Ceramic / Linen Shade", "price": 17200}
+      ],
+      "metafields_lighting": {
+        "material": "Hand-thrown Ceramic & Oatmeal Linen Shade",
+        "color": "Soft Sand / Warm Ivory",
+        "finish": "Coarse Matte Ceramic",
+        "width": "35 cm",
+        "height": "58 cm",
+        "depth": "35 cm",
+        "weight": "3.5 kg",
+        "bulb_type": "E27 Standard Socket",
+        "bulb_quantity": "1",
+        "wattage": "Max 40W (LED Recommended 9W)",
+        "voltage": "220V - 240V",
+        "light_color": "Diffused Warm Ambient",
+        "room": "Bedroom, Living Room, Console Table",
+        "installation_type": "Plug-in Cord with In-line Switch",
+        "care_instructions": "Dust linen shade with soft vacuum brush. Clean ceramic base with dry cloth."
+      }
+    },
+    {
+      "id": "prod-7",
+      "handle": "contemporary-floor-lamp",
+      "title": "Contemporary Floor Lamp",
+      "category": "Floor Lamps",
+      "type": "Lighting",
+      "room": "Living Room, Office",
+      "price": 32500,
+      "compare_at_price": 0,
+      "is_sale": false,
+      "featured_image": "https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Floor Lamps", "Lamps", "Living Room", "Office"],
+      "description": "Slender arched floor lamp with an adjustable cantilever armature and conical spun brass reflector, weighted by a solid stone footing.",
+      "variants": [
+        {"id": "var-7-1", "title": "Antiqued Bronze & Brass", "price": 32500}
+      ],
+      "metafields_lighting": {
+        "material": "Forged Iron, Spun Brass & Travertine Base",
+        "color": "Deep Antiqued Bronze",
+        "finish": "Waxed Bronze / Brushed Brass Accent",
+        "width": "42 cm",
+        "height": "165 cm",
+        "depth": "85 cm reach",
+        "weight": "11.2 kg",
+        "bulb_type": "E27 Warm LED",
+        "bulb_quantity": "1",
+        "wattage": "10W",
+        "voltage": "220V - 240V",
+        "light_color": "2700K Focused Task & Reading Glow",
+        "room": "Living Room, Reading Armchair, Executive Office",
+        "installation_type": "Floor Standing with Heavy Base & Foot Step Switch",
+        "care_instructions": "Wipe metal armature with dry cloth. Do not apply abrasive cleaners."
+      }
+    },
+    {
+      "id": "prod-8",
+      "handle": "decorative-hanging-light",
+      "title": "Decorative Hanging Light",
+      "category": "Fanoos",
+      "type": "Lighting",
+      "room": "Living Room, Entryway",
+      "price": 21000,
+      "compare_at_price": 25000,
+      "is_sale": true,
+      "featured_image": "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Fanoos", "Pendant", "Sale", "Entryway"],
+      "description": "Intricate geometric wireframe fanoos lantern with an amber inner globe, casting filigree lattice shadows across walls and ceilings.",
+      "variants": [
+        {"id": "var-8-1", "title": "Satin Bronze / Amber Glass", "price": 21000}
+      ],
+      "metafields_lighting": {
+        "material": "Laser-cut Steel Lattice & Amber Blown Glass",
+        "color": "Satin Bronze / Honey Amber",
+        "finish": "Hand-patinated Satin",
+        "width": "38 cm",
+        "height": "48 cm",
+        "depth": "38 cm",
+        "weight": "4.2 kg",
+        "bulb_type": "E27 Vintage Edison LED",
+        "bulb_quantity": "1",
+        "wattage": "6W Vintage Glow",
+        "voltage": "220V - 240V",
+        "light_color": "2200K Candle Warmth",
+        "room": "Entryway, Foyer, Covered Terrace",
+        "installation_type": "Chain Suspended Ceiling Hardwired",
+        "care_instructions": "Dust metal cage with soft dry brush."
+      }
+    },
+    {
+      "id": "prod-9",
+      "handle": "round-decorative-mirror",
+      "title": "Round Decorative Mirror",
+      "category": "Mirrors",
+      "type": "Home Decor",
+      "room": "Living Room, Entryway",
+      "price": 28000,
+      "compare_at_price": 34000,
+      "is_sale": true,
+      "featured_image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Mirrors", "Decor", "Sale", "Living Room", "Entryway"],
+      "description": "Minimalist deep-set floating round mirror encased in a hand-welded blackened bronze band with subtle brass rivet accents.",
+      "variants": [
+        {"id": "var-9-1", "title": "Deep Bronze / 80cm", "price": 28000},
+        {"id": "var-9-2", "title": "Warm Brass / 80cm", "price": 31000}
+      ],
+      "metafields_decor": {
+        "material": "High-clarity Silver Glass & Forged Bronze Metal Band",
+        "dimensions": "80 cm Diameter x 4.5 cm Depth",
+        "color": "Deep Blackened Bronze",
+        "finish": "Satin Waxed Metal Frame",
+        "weight": "7.2 kg",
+        "room": "Entryway, Living Room, Powder Room",
+        "care_instructions": "Clean glass with non-ammonia glass cleaner sprayed directly onto a microfiber cloth. Do not soak the bronze outer frame."
+      }
+    },
+    {
+      "id": "prod-10",
+      "handle": "textured-ceramic-vase",
+      "title": "Textured Ceramic Vase",
+      "category": "Vases",
+      "type": "Home Decor",
+      "room": "Living Room, Dining Room",
+      "price": 8500,
+      "compare_at_price": 0,
+      "is_sale": false,
+      "featured_image": "https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Vases", "Decor", "Ceramics", "Living Room"],
+      "description": "Organic wabi-sabi vessel featuring tactile sand-grit stoneware slip and dual artisanal looped handles.",
+      "variants": [
+        {"id": "var-10-1", "title": "Soft Sand / Ivory", "price": 8500},
+        {"id": "var-10-2", "title": "Charcoal Black", "price": 8500}
+      ],
+      "metafields_decor": {
+        "material": "Hand-shaped Stoneware Clay",
+        "dimensions": "22 cm Width x 32 cm Height",
+        "color": "Soft Sand & Ivory Slip",
+        "finish": "Coarse Unglazed Clay Exterior, Glazed Interior",
+        "weight": "2.1 kg",
+        "room": "Living Room, Dining Room Console",
+        "care_instructions": "Wipe exterior clean with a lightly damp sponge. Interior is watertight for botanical stems."
+      }
+    },
+    {
+      "id": "prod-11",
+      "handle": "modern-wall-decor",
+      "title": "Modern Wall Decor",
+      "category": "Wall Decor",
+      "type": "Home Decor",
+      "room": "Living Room, Bedroom, Office",
+      "price": 19500,
+      "compare_at_price": 23000,
+      "is_sale": true,
+      "featured_image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Wall Decor", "Decor", "Sale", "Living Room", "Office"],
+      "description": "Dimensional relief composition in carved plaster and natural oak framing, capturing changing light throughout the day.",
+      "variants": [
+        {"id": "var-11-1", "title": "Warm Off-White / Natural Oak Frame", "price": 19500}
+      ],
+      "metafields_decor": {
+        "material": "Cast Plaster Relief Panel & Solid Oak Floating Frame",
+        "dimensions": "60 cm Width x 90 cm Height x 5 cm Depth",
+        "color": "Warm Off-White",
+        "finish": "Matte Chalky Plaster Finish",
+        "weight": "4.8 kg",
+        "room": "Living Room, Office, Corridor",
+        "care_instructions": "Dust gently with dry soft brush. Keep away from humid areas."
+      }
+    },
+    {
+      "id": "prod-12",
+      "handle": "decorative-showpiece",
+      "title": "Decorative Showpiece",
+      "category": "Showpieces",
+      "type": "Home Decor",
+      "room": "Living Room, Office",
+      "price": 11200,
+      "compare_at_price": 0,
+      "is_sale": false,
+      "featured_image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Showpieces", "Decor", "Living Room", "Office"],
+      "description": "Sculptural interlocking loop figurine carved from dense composite stone, inspired by brutalist and mid-century architectural arches.",
+      "variants": [
+        {"id": "var-12-1", "title": "Charcoal Stone", "price": 11200},
+        {"id": "var-12-2", "title": "Warm Travertine Tone", "price": 11200}
+      ],
+      "metafields_decor": {
+        "material": "Cast Mineral Composite Stone",
+        "dimensions": "18 cm Width x 28 cm Height x 12 cm Depth",
+        "color": "Charcoal Grey",
+        "finish": "Smooth Honed Matte",
+        "weight": "3.4 kg",
+        "room": "Living Room, Bookcase, Executive Desk",
+        "care_instructions": "Wipe with dry microfiber cloth."
+      }
+    },
+    {
+      "id": "prod-13",
+      "handle": "contemporary-table-clock",
+      "title": "Contemporary Table Clock",
+      "category": "Clocks",
+      "type": "Home Decor",
+      "room": "Office, Living Room, Bedroom",
+      "price": 9800,
+      "compare_at_price": 12000,
+      "is_sale": true,
+      "featured_image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Clocks", "Decor", "Sale", "Office", "Bedroom"],
+      "description": "Minimalist mantel clock featuring a solid block of honed travertine marble with brushed brass hands and silent quartz sweep mechanism.",
+      "variants": [
+        {"id": "var-13-1", "title": "Natural Travertine & Brass", "price": 9800}
+      ],
+      "metafields_decor": {
+        "material": "Natural Beige Travertine Marble & Brass",
+        "dimensions": "15 cm Width x 18 cm Height x 6 cm Depth",
+        "color": "Warm Beige / Brushed Brass",
+        "finish": "Honed Matte Stone",
+        "weight": "2.5 kg",
+        "room": "Office, Living Room, Bedside",
+        "care_instructions": "Uses 1x AA battery. Wipe stone with dry cloth."
+      }
+    },
+    {
+      "id": "prod-14",
+      "handle": "minimal-decorative-object",
+      "title": "Minimal Decorative Object",
+      "category": "Decorative Objects",
+      "type": "Home Decor",
+      "room": "Living Room, Dining Room",
+      "price": 7200,
+      "compare_at_price": 0,
+      "is_sale": false,
+      "featured_image": "https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=1200&q=80",
+      "secondary_image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
+      "images": [
+        "https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "tags": ["Decorative Objects", "Decor", "Living Room", "Dining Room"],
+      "description": "Set of two tactile geometric stone spheres resting upon a fluted pedestal dish, ideal for console or coffee table styling vignettes.",
+      "variants": [
+        {"id": "var-14-1", "title": "Sand & Terracotta Flecks", "price": 7200}
+      ],
+      "metafields_decor": {
+        "material": "Sandstone & Fine Cast Terrazzo",
+        "dimensions": "24 cm Diameter Tray, 8cm & 6cm Spheres",
+        "color": "Sand with Muted Terracotta Inclusions",
+        "finish": "Honed Smooth",
+        "weight": "1.9 kg",
+        "room": "Living Room, Dining Room Table",
+        "care_instructions": "Dust with dry cloth."
+      }
+    }
+  ]
+}

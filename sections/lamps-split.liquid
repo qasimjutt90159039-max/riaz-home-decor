@@ -1,0 +1,60 @@
+<section class="split-lamps-grid" aria-label="Table and Floor Lamps">
+  <!-- Left Side: Table Lamps -->
+  <div class="split-lamp-card">
+    <img src="{{ section.settings.table_image | default: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=80' }}" 
+         alt="Table Lamps Showroom" 
+         loading="lazy">
+    <div class="split-lamp-overlay"></div>
+    <div class="split-lamp-content">
+      <span style="font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-sand);">Intimate Lighting</span>
+      <h3 class="editorial-title" style="font-size: 2.5rem; margin: 0.5rem 0 1rem; color: var(--color-white);">Table Lamps</h3>
+      <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.85); margin-bottom: 2rem;">
+        Textured ceramic pedestals, cast stone bases and linen shades designed to bring gentle reading light to bedside tables and consoles.
+      </p>
+      <a href="/collections/table-lamps" class="btn btn-outline-light">
+        Explore Table Lamps
+      </a>
+    </div>
+  </div>
+
+  <!-- Right Side: Floor Lamps -->
+  <div class="split-lamp-card">
+    <img src="{{ section.settings.floor_image | default: 'https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=1200&q=80' }}" 
+         alt="Floor Lamps Showroom" 
+         loading="lazy">
+    <div class="split-lamp-overlay"></div>
+    <div class="split-lamp-content">
+      <span style="font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-sand);">Sculptural Form</span>
+      <h3 class="editorial-title" style="font-size: 2.5rem; margin: 0.5rem 0 1rem; color: var(--color-white);">Floor Lamps</h3>
+      <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.85); margin-bottom: 2rem;">
+        Slender arches, cantilevered bronze silhouettes and minimalist vertical towers that define living space architecture.
+      </p>
+      <a href="/collections/floor-lamps" class="btn btn-outline-light">
+        Explore Floor Lamps
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Table & Floor Lamps",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "table_image",
+      "label": "Table Lamp Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "floor_image",
+      "label": "Floor Lamp Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Table & Floor Lamps"
+    }
+  ]
+}
+{% endschema %}

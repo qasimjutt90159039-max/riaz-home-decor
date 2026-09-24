@@ -1,0 +1,43 @@
+<section class="section" aria-label="Newsletter Subscription">
+  <div class="container">
+    <div class="newsletter-box">
+      <span class="section-eyebrow" style="color: var(--color-bronze-light);">Showroom Journal</span>
+      <h2 class="editorial-title" style="font-size: clamp(2rem, 3.5vw, 3rem); margin: 0.5rem 0 1rem; color: var(--color-white);">
+        {{ section.settings.title | default: 'Bring More Light Into Your Space' }}
+      </h2>
+      <p style="color: rgba(255, 255, 255, 0.8); max-width: 580px; margin: 0 auto; font-size: 1.05rem;">
+        Subscribe for architectural lighting concepts, new collection drops, and home decor styling notes straight from our Multan showroom.
+      </p>
+
+      {% form 'customer', class: 'newsletter-form' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <input type="email" 
+               name="contact[email]" 
+               class="newsletter-input" 
+               placeholder="Your email address" 
+               required 
+               aria-label="Your email address">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Bring More Light Into Your Space"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter"
+    }
+  ]
+}
+{% endschema %}

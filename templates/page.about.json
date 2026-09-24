@@ -1,0 +1,12 @@
+{
+  "name": "About Showroom",
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main-page"
+  ]
+}

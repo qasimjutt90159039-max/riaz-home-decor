@@ -1,0 +1,12 @@
+{
+  "name": "Lighting Gallery",
+  "sections": {
+    "lighting-landing": {
+      "type": "lighting-landing",
+      "settings": {}
+    }
+  },
+  "order": [
+    "lighting-landing"
+  ]
+}

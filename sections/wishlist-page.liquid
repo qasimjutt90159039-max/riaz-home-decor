@@ -1,0 +1,29 @@
+<div class="section" style="padding-top: 3rem;">
+  <div class="container">
+    {% render 'breadcrumbs' %}
+
+    <div style="margin: 2rem 0 3rem; text-align: center;">
+      <span class="section-eyebrow">Curated Selections</span>
+      <h1 class="editorial-title">Your Showroom Wishlist</h1>
+      <p class="section-subtext" style="margin: 0 auto;">
+        Review your saved lighting and decor pieces, prepare for showroom consultation, or move items into your bag.
+      </p>
+    </div>
+
+    <!-- Container rendered via assets/wishlist.js -->
+    <div class="wishlist-page-container">
+      <div class="cart-empty-message" style="padding: 4rem 1rem;">
+        <h2 class="cart-empty-title">Your Wishlist is Empty</h2>
+        <p class="cart-empty-text">Save your favorite lighting and decor pieces to review them later or prepare your showroom consultation.</p>
+        <a href="/collections/all" class="btn btn-primary btn-sm">Explore Collections</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Wishlist Page",
+  "settings": []
+}
+{% endschema %}

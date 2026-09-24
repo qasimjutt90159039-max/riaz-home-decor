@@ -1,0 +1,87 @@
+<section class="section" aria-label="Shop by Room">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-eyebrow">Atmospheric Spatial Curation</span>
+      <h2 class="editorial-title">{{ section.settings.title | default: 'Lighting and Decor by Room' }}</h2>
+      <p class="section-subtext">
+        Every room serves an individual purpose. Choose fixtures and accents tailored to the scale, intimacy, and architecture of each sanctuary.
+      </p>
+    </div>
+
+    <div class="by-room-grid">
+      <!-- Living Room (Span 7) -->
+      <a href="/collections/living-room" class="room-card room-span-7">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80" alt="Living Room Lighting" loading="lazy">
+        <div class="room-overlay"></div>
+        <div class="room-content">
+          <span style="font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-sand);">Sanctuary</span>
+          <h3 class="room-title">Living Room</h3>
+          <span class="room-link-text">Explore Space →</span>
+        </div>
+      </a>
+
+      <!-- Dining Room (Span 5) -->
+      <a href="/collections/dining-room" class="room-card room-span-5">
+        <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=900&q=80" alt="Dining Room Lighting" loading="lazy">
+        <div class="room-overlay"></div>
+        <div class="room-content">
+          <span style="font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-sand);">Gathering</span>
+          <h3 class="room-title">Dining Room</h3>
+          <span class="room-link-text">Explore Space →</span>
+        </div>
+      </a>
+
+      <!-- Bedroom (Span 4) -->
+      <a href="/collections/bedroom" class="room-card room-span-4">
+        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" alt="Bedroom Lighting" loading="lazy">
+        <div class="room-overlay"></div>
+        <div class="room-content">
+          <span style="font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-sand);">Rest & Serenity</span>
+          <h3 class="room-title">Bedroom</h3>
+          <span class="room-link-text">Explore Space →</span>
+        </div>
+      </a>
+
+      <!-- Entryway (Span 4) -->
+      <a href="/collections/entryway" class="room-card room-span-4">
+        <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" alt="Entryway Lighting" loading="lazy">
+        <div class="room-overlay"></div>
+        <div class="room-content">
+          <span style="font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-sand);">First Impression</span>
+          <h3 class="room-title">Entryway</h3>
+          <span class="room-link-text">Explore Space →</span>
+        </div>
+      </a>
+
+      <!-- Office (Span 4) -->
+      <a href="/collections/office" class="room-card room-span-4">
+        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" alt="Office Lighting" loading="lazy">
+        <div class="room-overlay"></div>
+        <div class="room-content">
+          <span style="font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-sand);">Focus & Craft</span>
+          <h3 class="room-title">Office</h3>
+          <span class="room-link-text">Explore Space →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Shop by Room",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Lighting and Decor by Room"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop by Room"
+    }
+  ]
+}
+{% endschema %}

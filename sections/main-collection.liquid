@@ -1,0 +1,66 @@
+<div class="section" style="padding-top: 3rem;">
+  <div class="container">
+    {% render 'breadcrumbs' %}
+
+    <div style="margin: 2rem 0 2.5rem; max-width: 800px;">
+      <h1 class="editorial-title" style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 0.75rem;">
+        {{ collection.title | default: 'All Showroom Collections' }}
+      </h1>
+      <p class="section-subtext">
+        {{ collection.description | default: 'Explore our complete catalog of decorative lanterns, architectural chandeliers, ambient lamps, and sculptural home decor.' }}
+      </p>
+    </div>
+
+    <!-- Collection Filter & Sorting Toolbar -->
+    <div class="collection-toolbar">
+      <div class="filter-pills-row">
+        <button type="button" class="quick-category-pill active" data-filter-category="all">All</button>
+        <button type="button" class="quick-category-pill" data-filter-category="lighting">Lighting</button>
+        <button type="button" class="quick-category-pill" data-filter-category="fanoos">Fanoos</button>
+        <button type="button" class="quick-category-pill" data-filter-category="chandeliers">Chandeliers</button>
+        <button type="button" class="quick-category-pill" data-filter-category="lamps">Lamps</button>
+        <button type="button" class="quick-category-pill" data-filter-category="decor">Home Decor</button>
+        <button type="button" class="quick-category-pill" data-filter-category="vases">Vases</button>
+        <button type="button" class="quick-category-pill" data-filter-category="mirrors">Mirrors</button>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span data-product-count style="font-size: 0.8125rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.08em;">
+          {{ collection.products_count | default: 14 }} pieces
+        </span>
+
+        <select class="filter-select" data-sort-select aria-label="Sort products">
+          <option value="featured">Sort: Featured</option>
+          <option value="price-low-high">Price: Low to High</option>
+          <option value="price-high-low">Price: High to Low</option>
+          <option value="title-asc">Alphabetical: A-Z</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    {%- paginate collection.products by 16 -%}
+      <div class="product-grid">
+        {%- if collection.products.size > 0 -%}
+          {%- for product in collection.products -%}
+            {% render 'product-card', product: product %}
+          {%- endfor -%}
+        {%- else -%}
+          <!-- Demo products fallback for development preview -->
+          {%- comment -%}
+            Render the 14 realistic demo products
+          {%- endcomment -%}
+        {%- endif -%}
+      </div>
+
+      {% render 'pagination', paginate: paginate %}
+    {%- endpaginate -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Collection",
+  "settings": []
+}
+{% endschema %}

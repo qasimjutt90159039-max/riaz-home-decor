@@ -1,0 +1,34 @@
+<div class="search-modal" role="dialog" aria-modal="true" aria-label="Search Showroom">
+  <div class="container">
+    <div class="search-header-bar">
+      <div class="search-input-wrap">
+        <input type="search" 
+               placeholder="Search chandeliers, fanoos, wall lights, vases..." 
+               data-search-input 
+               aria-label="Search products" 
+               autocomplete="off">
+      </div>
+      <button type="button" class="search-close-btn" data-search-close aria-label="Close search overlay">
+        {% render 'icon', icon: 'close' %}
+      </button>
+    </div>
+
+    <!-- Live Predictive Search Results Area -->
+    <div class="search-results-area" data-search-results>
+      <div style="padding: 1.5rem 0; color: var(--color-text-muted); font-size: 0.9375rem;">
+        Suggested searches: 
+        <a href="/collections/fanoos" style="text-decoration: underline; margin-left: 0.5rem; color: var(--color-charcoal);">Fanoos</a>, 
+        <a href="/collections/chandeliers" style="text-decoration: underline; margin-left: 0.5rem; color: var(--color-charcoal);">Chandeliers</a>, 
+        <a href="/collections/lamps" style="text-decoration: underline; margin-left: 0.5rem; color: var(--color-charcoal);">Lamps</a>, 
+        <a href="/pages/home-decor" style="text-decoration: underline; margin-left: 0.5rem; color: var(--color-charcoal);">Ceramic Vases</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Search Overlay",
+  "settings": []
+}
+{% endschema %}

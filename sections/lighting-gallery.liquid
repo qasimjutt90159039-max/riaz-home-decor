@@ -1,0 +1,102 @@
+<section class="section section-dark" aria-label="Lighting Gallery">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-eyebrow">Showroom Gallery</span>
+      <h2 class="section-title editorial-title">{{ section.settings.title | default: 'Illuminate Every Corner' }}</h2>
+      <p class="section-subtext">
+        {{ section.settings.subtext | default: 'Explore lighting curated to create focal presence, architectural clarity, and serene warmth in every living area.' }}
+      </p>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Card 1: Statement Lighting (Large) -->
+      <a href="/collections/chandeliers" class="gallery-card large">
+        <div class="gallery-media">
+          <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=80" 
+               alt="Statement Lighting" 
+               loading="lazy">
+        </div>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-content">
+          <span class="gallery-badge">Focal Centerpieces</span>
+          <h3 class="gallery-title editorial-title">Statement Lighting</h3>
+          <p class="gallery-desc">Large chandeliers and sculptural decorative lighting created to anchor open double-height spaces and grand dining tables.</p>
+          <span class="btn btn-outline-light btn-sm">Explore Statement Pieces →</span>
+        </div>
+      </a>
+
+      <!-- Card 2: Everyday Lighting (Tall) -->
+      <a href="/collections/ceiling-lights" class="gallery-card tall">
+        <div class="gallery-media">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" 
+               alt="Everyday Lighting" 
+               loading="lazy">
+        </div>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-content">
+          <span class="gallery-badge">Essential Architecture</span>
+          <h3 class="gallery-title editorial-title">Everyday Lighting</h3>
+          <p class="gallery-desc">Pendant, ceiling and flush-mount wall fixtures delivering balanced illumination for hallways and kitchens.</p>
+          <span class="btn btn-outline-light btn-sm">Discover Everyday →</span>
+        </div>
+      </a>
+
+      <!-- Card 3: Ambient Lighting (Split 1) -->
+      <a href="/collections/table-lamps" class="gallery-card split">
+        <div class="gallery-media">
+          <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=900&q=80" 
+               alt="Table and Accent Lighting" 
+               loading="lazy">
+        </div>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-content">
+          <span class="gallery-badge">Intimate Glow</span>
+          <h3 class="gallery-title editorial-title">Ambient Table Lamps</h3>
+          <p class="gallery-desc">Ceramic, brass and stone bedside and console lamps that infuse soft soothing light.</p>
+          <span class="btn btn-outline-light btn-sm">View Table Lamps →</span>
+        </div>
+      </a>
+
+      <!-- Card 4: Floor Lamps (Split 2) -->
+      <a href="/collections/floor-lamps" class="gallery-card split">
+        <div class="gallery-media">
+          <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=900&q=80" 
+               alt="Floor Lamps" 
+               loading="lazy">
+        </div>
+        <div class="gallery-overlay"></div>
+        <div class="gallery-content">
+          <span class="gallery-badge">Architectural Form</span>
+          <h3 class="gallery-title editorial-title">Standing Floor Lamps</h3>
+          <p class="gallery-desc">Cantilevered and arched floor lamps designed for reading nooks and living vignettes.</p>
+          <span class="btn btn-outline-light btn-sm">View Floor Lamps →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Lighting Gallery",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Gallery Title",
+      "default": "Illuminate Every Corner"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Gallery Subtext",
+      "default": "Explore lighting curated to create focal presence, architectural clarity, and serene warmth in every living area."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lighting Gallery"
+    }
+  ]
+}
+{% endschema %}

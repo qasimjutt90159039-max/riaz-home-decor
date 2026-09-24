@@ -1,0 +1,66 @@
+<div class="cart-drawer" role="dialog" aria-modal="true" aria-label="Showroom Bag">
+  <div class="drawer-header">
+    <h3 class="drawer-title">Showroom Bag</h3>
+    <button type="button" class="drawer-close" data-cart-close aria-label="Close cart drawer">
+      {% render 'icon', icon: 'close' %}
+    </button>
+  </div>
+
+  <div class="drawer-body">
+    <!-- Populated dynamically via cart.js and Shopify Ajax API -->
+    {%- if cart.item_count == 0 -%}
+      <div class="cart-empty-message">
+        <h3 class="cart-empty-title">Your space is waiting</h3>
+        <p class="cart-empty-text">Your showroom bag is currently empty. Explore our lighting and home decor collections to illuminate your space.</p>
+        <a href="/collections/all" class="btn btn-outline btn-sm" onclick="window.cartManager.closeDrawer()">Explore Collections</a>
+      </div>
+    {%- else -%}
+      {%- for item in cart.items -%}
+        <div class="cart-item" data-id="{{ item.key }}">
+          <div class="cart-item-image">
+            <img src="{{ item.image | image_url: width: 200 }}" alt="{{ item.title | escape }}" loading="lazy">
+          </div>
+          <div class="cart-item-details">
+            <h4 class="cart-item-title">{{ item.product.title }}</h4>
+            {%- unless item.product.has_only_default_variant -%}
+              <div class="cart-item-variant">{{ item.variant.title }}</div>
+            {%- endunless -%}
+            <div class="cart-item-price">{{ item.final_line_price | money }}</div>
+            <div class="cart-item-actions">
+              <div class="qty-control">
+                <button type="button" class="qty-btn" onclick="window.cartManager.updateQuantity('{{ item.key }}', {{ item.quantity | minus: 1 }})">-</button>
+                <input type="text" class="qty-input" value="{{ item.quantity }}" readonly>
+                <button type="button" class="qty-btn" onclick="window.cartManager.updateQuantity('{{ item.key }}', {{ item.quantity | plus: 1 }})">+</button>
+              </div>
+              <button type="button" class="cart-item-remove" onclick="window.cartManager.removeItem('{{ item.key }}')">Remove</button>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+
+  <div class="drawer-footer" {% if cart.item_count == 0 %}style="display: none;"{% endif %}>
+    <div class="subtotal-row">
+      <span>Subtotal</span>
+      <span class="drawer-subtotal-val">{{ cart.total_price | money }}</span>
+    </div>
+    <p class="cart-note-text">Taxes and shipping calculated at checkout.</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+      <a href="/checkout" class="btn btn-primary btn-full">
+        Proceed to Checkout
+      </a>
+      <a href="/cart" class="btn btn-outline btn-sm btn-full" onclick="window.cartManager.closeDrawer()">
+        View Cart Page
+      </a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cart Drawer",
+  "settings": []
+}
+{% endschema %}

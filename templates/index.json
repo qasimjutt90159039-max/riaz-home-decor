@@ -1,0 +1,100 @@
+{
+  "name": "Homepage",
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "headline": "Light Changes Everything",
+        "supporting_text": "Discover lighting and home decor pieces designed to bring atmosphere, warmth and character to your space.",
+        "button_1_text": "Explore Lighting",
+        "button_1_link": "/pages/lighting",
+        "button_2_text": "Shop Decor",
+        "button_2_link": "/pages/home-decor"
+      }
+    },
+    "category-nav": {
+      "type": "category-navigation",
+      "settings": {}
+    },
+    "lighting-gallery": {
+      "type": "lighting-gallery",
+      "settings": {
+        "title": "Illuminate Every Corner",
+        "subtext": "Explore lighting curated to create focal presence, architectural clarity, and serene warmth in every living area."
+      }
+    },
+    "featured-fanoos": {
+      "type": "featured-fanoos",
+      "settings": {}
+    },
+    "chandelier-spotlight": {
+      "type": "chandelier-spotlight",
+      "settings": {
+        "headline": "Make a Statement",
+        "supporting_text": "Explore statement lighting for spaces that deserve a striking focal point.",
+        "button_text": "Shop Chandeliers"
+      }
+    },
+    "by-room": {
+      "type": "by-room",
+      "settings": {
+        "title": "Lighting and Decor by Room"
+      }
+    },
+    "home-decor": {
+      "type": "home-decor-section",
+      "settings": {
+        "headline": "Details Make the Room"
+      }
+    },
+    "lamps-split": {
+      "type": "lamps-split",
+      "settings": {}
+    },
+    "wall-lighting": {
+      "type": "wall-lighting",
+      "settings": {
+        "headline": "Bring the Walls to Life"
+      }
+    },
+    "new-arrivals": {
+      "type": "new-arrivals",
+      "settings": {
+        "title": "New Arrivals"
+      }
+    },
+    "featured-decor": {
+      "type": "featured-decor",
+      "settings": {
+        "title": "Featured Decor"
+      }
+    },
+    "room-inspiration": {
+      "type": "room-inspiration",
+      "settings": {
+        "title": "Atmospheric Inspiration"
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "title": "Bring More Light Into Your Space"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "category-nav",
+    "lighting-gallery",
+    "featured-fanoos",
+    "chandelier-spotlight",
+    "by-room",
+    "home-decor",
+    "lamps-split",
+    "wall-lighting",
+    "new-arrivals",
+    "featured-decor",
+    "room-inspiration",
+    "newsletter"
+  ]
+}

@@ -1,0 +1,112 @@
+{% comment %}
+  Riaz Home Decor - Showroom Product Card Snippet
+  Usage: {% render 'product-card', product: product %}
+{% endcomment %}
+
+{%- liquid
+  assign variant = product.selected_or_first_available_variant
+  assign compare_at = variant.compare_at_price
+  assign price = variant.price
+  assign is_sale = false
+  if compare_at > price
+    assign is_sale = true
+  endif
+
+  assign first_image = product.featured_image
+  assign second_image = product.images[1] | default: product.featured_image
+-%}
+
+<div class="product-card" 
+     data-id="{{ product.id }}"
+     data-title="{{ product.title | escape }}"
+     data-price="{{ price | divided_by: 100.0 }}"
+     data-category="{{ product.type | default: product.collections.first.title | escape }}"
+     data-room="{{ product.metafields.custom.room | default: '' }}"
+     data-type="{{ product.type | default: '' }}">
+  
+  <div class="card-media-wrapper">
+    <!-- Primary and Secondary Hover Image -->
+    <a href="{{ product.url }}">
+      <img class="card-media-primary" 
+           src="{{ first_image | image_url: width: 800 }}" 
+           alt="{{ product.title | escape }}" 
+           loading="lazy" 
+           width="400" 
+           height="500">
+      {%- if second_image != blank and second_image != first_image -%}
+        <img class="card-media-secondary" 
+             src="{{ second_image | image_url: width: 800 }}" 
+             alt="{{ product.title | escape }}" 
+             loading="lazy" 
+             width="400" 
+             height="500">
+      {%- endif -%}
+    </a>
+
+    <!-- Badges -->
+    <div class="card-badges">
+      {%- if is_sale -%}
+        <span class="badge-sale">Sale</span>
+      {%- endif -%}
+      {%- if product.tags contains 'New' or product.tags contains 'new' -%}
+        <span class="badge-tag">New</span>
+      {%- endif -%}
+    </div>
+
+    <!-- Quick Action Icons (Wishlist & Quick View) -->
+    <div class="card-quick-actions">
+      <button type="button" 
+              class="card-action-btn" 
+              data-wishlist-toggle 
+              data-product-id="{{ product.id }}"
+              data-title="{{ product.title | escape }}"
+              data-price="{{ price | divided_by: 100.0 }}"
+              data-image="{{ first_image | image_url: width: 400 }}"
+              data-handle="{{ product.handle }}"
+              aria-label="Add to wishlist" 
+              title="Add to Wishlist">
+        {% render 'icon', icon: 'heart' %}
+      </button>
+
+      <button type="button" 
+              class="card-action-btn" 
+              data-quick-view-btn 
+              data-id="{{ product.id }}"
+              data-title="{{ product.title | escape }}"
+              data-price="{{ price | divided_by: 100.0 }}"
+              {% if is_sale %}data-compare-price="{{ compare_at | divided_by: 100.0 }}"{% endif %}
+              data-image="{{ first_image | image_url: width: 700 }}"
+              data-category="{{ product.type | default: 'Lighting' | escape }}"
+              data-url="{{ product.url }}"
+              data-desc="{{ product.description | strip_html | truncate: 140 | escape }}"
+              aria-label="Quick view" 
+              title="Quick View">
+        {% render 'icon', icon: 'eye' %}
+      </button>
+    </div>
+
+    <!-- Quick Add to Cart Drawer Overlay -->
+    <div class="card-quick-add-wrap">
+      <button type="button" 
+              class="btn btn-primary btn-sm btn-full" 
+              data-quick-add-id="{{ variant.id }}"
+              data-title="{{ product.title | escape }}"
+              data-price="{{ price | divided_by: 100.0 }}"
+              data-image="{{ first_image | image_url: width: 400 }}">
+        + Quick Add
+      </button>
+    </div>
+  </div>
+
+  <div class="card-content">
+    {%- if product.type != blank -%}
+      <span class="card-category">{{ product.type }}</span>
+    {%- endif -%}
+    
+    <h3 class="card-title">
+      <a href="{{ product.url }}">{{ product.title }}</a>
+    </h3>
+
+    {% render 'price', product: product %}
+  </div>
+</div>

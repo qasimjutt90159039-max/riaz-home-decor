@@ -1,0 +1,24 @@
+{% comment %}
+  Riaz Home Decor - Breadcrumbs Snippet
+{% endcomment %}
+
+<nav class="pdp-breadcrumb" aria-label="breadcrumbs">
+  <a href="/">Home</a>
+  <span style="color: var(--color-sand-dark);">/</span>
+  {%- if template contains 'collection' -%}
+    <span>{{ collection.title }}</span>
+  {%- elsif template contains 'product' -%}
+    {%- if collection -%}
+      <a href="{{ collection.url }}">{{ collection.title }}</a>
+      <span style="color: var(--color-sand-dark);">/</span>
+    {%- else -%}
+      <a href="/collections/all">Shop</a>
+      <span style="color: var(--color-sand-dark);">/</span>
+    {%- endif -%}
+    <span>{{ product.title }}</span>
+  {%- elsif template contains 'page' -%}
+    <span>{{ page.title }}</span>
+  {%- elsif template contains 'cart' -%}
+    <span>Bag</span>
+  {%- endif -%}
+</nav>

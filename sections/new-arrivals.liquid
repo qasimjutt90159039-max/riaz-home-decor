@@ -1,0 +1,137 @@
+<section class="section" aria-label="New Arrivals">
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1.5rem;">
+      <div>
+        <span class="section-eyebrow">Fresh Showroom Arrivals</span>
+        <h2 class="editorial-title">{{ section.settings.title | default: 'New Arrivals' }}</h2>
+        <p class="section-subtext">Recently arrived luminaires and artisanal objects added to our Multan gallery.</p>
+      </div>
+      <div>
+        <a href="/collections/all" class="btn btn-outline">
+          View All New Pieces →
+        </a>
+      </div>
+    </div>
+
+    <div class="product-grid">
+      {%- if section.settings.collection != blank and section.settings.collection.products.size > 0 -%}
+        {%- for product in section.settings.collection.products limit: 4 -%}
+          {% render 'product-card', product: product %}
+        {%- endfor -%}
+      {%- else -%}
+        <!-- Demo Products -->
+        <div class="product-card" data-id="demo-new-1" data-title="Decorative Ceiling Light" data-price="24000" data-category="Ceiling Lights">
+          <div class="card-media-wrapper">
+            <a href="/products/decorative-ceiling-light">
+              <img class="card-media-primary" src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" alt="Decorative Ceiling Light" loading="lazy">
+              <img class="card-media-secondary" src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" alt="Decorative Ceiling Light Angle" loading="lazy">
+            </a>
+            <div class="card-badges"><span class="badge-tag">New</span></div>
+            <div class="card-quick-actions">
+              <button type="button" class="card-action-btn" data-wishlist-toggle data-product-id="demo-new-1" data-title="Decorative Ceiling Light" data-price="24000" data-image="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" data-handle="decorative-ceiling-light" aria-label="Add to wishlist">{% render 'icon', icon: 'heart' %}</button>
+              <button type="button" class="card-action-btn" data-quick-view-btn data-id="demo-new-1" data-title="Decorative Ceiling Light" data-price="24000" data-image="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" data-category="Ceiling Lights" data-url="/products/decorative-ceiling-light" aria-label="Quick view">{% render 'icon', icon: 'eye' %}</button>
+            </div>
+            <div class="card-quick-add-wrap">
+              <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-id="v-new-1" data-title="Decorative Ceiling Light" data-price="24000" data-image="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80">+ Quick Add</button>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Ceiling Lights</span>
+            <h3 class="card-title"><a href="/products/decorative-ceiling-light">Decorative Ceiling Light</a></h3>
+            <div class="card-price-row"><span class="price-regular">PKR 24,000</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="demo-new-2" data-title="Modern Wall Sconce" data-price="12800" data-category="Wall Lights">
+          <div class="card-media-wrapper">
+            <a href="/products/modern-wall-sconce">
+              <img class="card-media-primary" src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80" alt="Modern Wall Sconce" loading="lazy">
+              <img class="card-media-secondary" src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" alt="Modern Wall Sconce Detail" loading="lazy">
+            </a>
+            <div class="card-badges"><span class="badge-tag">New</span></div>
+            <div class="card-quick-actions">
+              <button type="button" class="card-action-btn" data-wishlist-toggle data-product-id="demo-new-2" data-title="Modern Wall Sconce" data-price="12800" data-image="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80" data-handle="modern-wall-sconce" aria-label="Add to wishlist">{% render 'icon', icon: 'heart' %}</button>
+              <button type="button" class="card-action-btn" data-quick-view-btn data-id="demo-new-2" data-title="Modern Wall Sconce" data-price="12800" data-image="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80" data-category="Wall Lights" data-url="/products/modern-wall-sconce" aria-label="Quick view">{% render 'icon', icon: 'eye' %}</button>
+            </div>
+            <div class="card-quick-add-wrap">
+              <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-id="v-new-2" data-title="Modern Wall Sconce" data-price="12800" data-image="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80">+ Quick Add</button>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Wall Lights</span>
+            <h3 class="card-title"><a href="/products/modern-wall-sconce">Modern Wall Sconce</a></h3>
+            <div class="card-price-row"><span class="price-regular">PKR 12,800</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="demo-new-3" data-title="Classic Table Lamp" data-price="16200" data-category="Table Lamps">
+          <div class="card-media-wrapper">
+            <a href="/products/classic-table-lamp">
+              <img class="card-media-primary" src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" alt="Classic Table Lamp" loading="lazy">
+              <img class="card-media-secondary" src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=800&q=80" alt="Classic Table Lamp Angle" loading="lazy">
+            </a>
+            <div class="card-badges"><span class="badge-sale">Sale</span></div>
+            <div class="card-quick-actions">
+              <button type="button" class="card-action-btn" data-wishlist-toggle data-product-id="demo-new-3" data-title="Classic Table Lamp" data-price="16200" data-image="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" data-handle="classic-table-lamp" aria-label="Add to wishlist">{% render 'icon', icon: 'heart' %}</button>
+              <button type="button" class="card-action-btn" data-quick-view-btn data-id="demo-new-3" data-title="Classic Table Lamp" data-price="16200" data-compare-price="19000" data-image="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" data-category="Table Lamps" data-url="/products/classic-table-lamp" aria-label="Quick view">{% render 'icon', icon: 'eye' %}</button>
+            </div>
+            <div class="card-quick-add-wrap">
+              <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-id="v-new-3" data-title="Classic Table Lamp" data-price="16200" data-image="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80">+ Quick Add</button>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Table Lamps</span>
+            <h3 class="card-title"><a href="/products/classic-table-lamp">Classic Table Lamp</a></h3>
+            <div class="card-price-row"><span class="price-regular">PKR 16,200</span><span class="price-compare">PKR 19,000</span></div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="demo-new-4" data-title="Contemporary Floor Lamp" data-price="32500" data-category="Floor Lamps">
+          <div class="card-media-wrapper">
+            <a href="/products/contemporary-floor-lamp">
+              <img class="card-media-primary" src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=800&q=80" alt="Contemporary Floor Lamp" loading="lazy">
+              <img class="card-media-secondary" src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" alt="Contemporary Floor Lamp Angle" loading="lazy">
+            </a>
+            <div class="card-badges"><span class="badge-tag">New</span></div>
+            <div class="card-quick-actions">
+              <button type="button" class="card-action-btn" data-wishlist-toggle data-product-id="demo-new-4" data-title="Contemporary Floor Lamp" data-price="32500" data-image="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=800&q=80" data-handle="contemporary-floor-lamp" aria-label="Add to wishlist">{% render 'icon', icon: 'heart' %}</button>
+              <button type="button" class="card-action-btn" data-quick-view-btn data-id="demo-new-4" data-title="Contemporary Floor Lamp" data-price="32500" data-image="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=800&q=80" data-category="Floor Lamps" data-url="/products/contemporary-floor-lamp" aria-label="Quick view">{% render 'icon', icon: 'eye' %}</button>
+            </div>
+            <div class="card-quick-add-wrap">
+              <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-id="v-new-4" data-title="Contemporary Floor Lamp" data-price="32500" data-image="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=800&q=80">+ Quick Add</button>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Floor Lamps</span>
+            <h3 class="card-title"><a href="/products/contemporary-floor-lamp">Contemporary Floor Lamp</a></h3>
+            <div class="card-price-row"><span class="price-regular">PKR 32,500</span></div>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "New Arrivals",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "New Arrivals"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Arrivals"
+    }
+  ]
+}
+{% endschema %}

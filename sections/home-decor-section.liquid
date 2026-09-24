@@ -1,0 +1,88 @@
+<section class="section section-warm" aria-label="Home Decor Highlights">
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1.5rem;">
+      <div style="max-width: 600px;">
+        <span class="section-eyebrow">Tactile Artisanal Accents</span>
+        <h2 class="editorial-title">{{ section.settings.headline | default: 'Details Make the Room' }}</h2>
+        <p class="section-subtext">
+          Textured ceramics, patinated mirrors and sculptural objects that enrich the quiet corners of your living spaces.
+        </p>
+      </div>
+      <div>
+        <a href="/pages/home-decor" class="btn btn-primary">
+          Explore Home Decor →
+        </a>
+      </div>
+    </div>
+
+    <!-- Category Grid for Decor -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;">
+      <a href="/collections/mirrors" class="product-card" style="text-align: center; padding: 1.75rem 1rem;">
+        <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--color-sand); margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-bronze);">M</span>
+        </div>
+        <h4 style="font-size: 1.15rem; font-family: var(--font-serif); margin-bottom: 0.25rem;">Mirrors</h4>
+        <span style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted);">Bronze & Blackened</span>
+      </a>
+
+      <a href="/collections/vases" class="product-card" style="text-align: center; padding: 1.75rem 1rem;">
+        <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--color-sand); margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-bronze);">V</span>
+        </div>
+        <h4 style="font-size: 1.15rem; font-family: var(--font-serif); margin-bottom: 0.25rem;">Vases</h4>
+        <span style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted);">Textured Ceramic</span>
+      </a>
+
+      <a href="/collections/wall-decor" class="product-card" style="text-align: center; padding: 1.75rem 1rem;">
+        <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--color-sand); margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-bronze);">W</span>
+        </div>
+        <h4 style="font-size: 1.15rem; font-family: var(--font-serif); margin-bottom: 0.25rem;">Wall Decor</h4>
+        <span style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted);">Relief & Artistry</span>
+      </a>
+
+      <a href="/collections/decorative-objects" class="product-card" style="text-align: center; padding: 1.75rem 1rem;">
+        <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--color-sand); margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-bronze);">D</span>
+        </div>
+        <h4 style="font-size: 1.15rem; font-family: var(--font-serif); margin-bottom: 0.25rem;">Decorative Objects</h4>
+        <span style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted);">Stone & Sculptures</span>
+      </a>
+
+      <a href="/collections/clocks" class="product-card" style="text-align: center; padding: 1.75rem 1rem;">
+        <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--color-sand); margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-bronze);">C</span>
+        </div>
+        <h4 style="font-size: 1.15rem; font-family: var(--font-serif); margin-bottom: 0.25rem;">Clocks</h4>
+        <span style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted);">Travertine & Brass</span>
+      </a>
+
+      <a href="/collections/showpieces" class="product-card" style="text-align: center; padding: 1.75rem 1rem;">
+        <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--color-sand); margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-bronze);">S</span>
+        </div>
+        <h4 style="font-size: 1.15rem; font-family: var(--font-serif); margin-bottom: 0.25rem;">Showpieces</h4>
+        <span style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted);">Focal Centerpieces</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home Decor Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Details Make the Room"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Decor Section"
+    }
+  ]
+}
+{% endschema %}

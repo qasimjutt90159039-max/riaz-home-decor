@@ -1,0 +1,65 @@
+{% comment %}
+  Riaz Home Decor - Decor Metafields Snippet
+  Displays technical decor specifications only when populated in Shopify.
+  Never invent specifications.
+{% endcomment %}
+
+{%- liquid
+  assign d = product.metafields.decor
+  assign c = product.metafields.custom
+-%}
+
+<div class="metafields-decor-section">
+  <table class="specs-table">
+    <tbody>
+      {%- if d.material != blank or c.material != blank -%}
+        <tr>
+          <td class="specs-label">Material</td>
+          <td class="specs-value">{{ d.material | default: c.material }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if d.dimensions != blank or c.dimensions != blank -%}
+        <tr>
+          <td class="specs-label">Dimensions</td>
+          <td class="specs-value">{{ d.dimensions | default: c.dimensions }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if d.color != blank or c.color != blank -%}
+        <tr>
+          <td class="specs-label">Color / Tone</td>
+          <td class="specs-value">{{ d.color | default: c.color }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if d.finish != blank or c.finish != blank -%}
+        <tr>
+          <td class="specs-label">Finish</td>
+          <td class="specs-value">{{ d.finish | default: c.finish }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if d.weight != blank or c.weight != blank -%}
+        <tr>
+          <td class="specs-label">Weight</td>
+          <td class="specs-value">{{ d.weight | default: c.weight }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if d.room != blank or c.room != blank -%}
+        <tr>
+          <td class="specs-label">Suitable Room</td>
+          <td class="specs-value">{{ d.room | default: c.room }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if d.care_instructions != blank or c.care_instructions != blank -%}
+        <tr>
+          <td class="specs-label">Care Instructions</td>
+          <td class="specs-value">{{ d.care_instructions | default: c.care_instructions }}</td>
+        </tr>
+      {%- endif -%}
+    </tbody>
+  </table>
+</div>

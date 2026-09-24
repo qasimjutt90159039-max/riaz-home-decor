@@ -1,0 +1,12 @@
+{
+  "name": "Home Decor Gallery",
+  "sections": {
+    "home-decor-landing": {
+      "type": "home-decor-landing",
+      "settings": {}
+    }
+  },
+  "order": [
+    "home-decor-landing"
+  ]
+}

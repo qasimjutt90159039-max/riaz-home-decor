@@ -1,0 +1,79 @@
+<div class="section" style="padding-top: 3.5rem;">
+  <div class="container">
+    {% render 'breadcrumbs' %}
+
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin: 2rem 0 3rem; flex-wrap: wrap; gap: 1.5rem;">
+      <div>
+        <span class="section-eyebrow">Client Portal</span>
+        <h1 class="editorial-title">Welcome, {{ customer.name }}</h1>
+        <p class="section-subtext">Manage your showroom orders and account details.</p>
+      </div>
+      <div>
+        <a href="/account/logout" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: start;">
+      <!-- Order History -->
+      <div style="background: var(--color-white); border: var(--border-hairline); border-radius: var(--radius-subtle); padding: 2rem;">
+        <h2 class="editorial-title" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Order History</h2>
+
+        {%- paginate customer.orders by 20 -%}
+          {%- if customer.orders.size > 0 -%}
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.9375rem;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--color-sand); text-align: left;">
+                  <th style="padding: 0.75rem 0;">Order</th>
+                  <th style="padding: 0.75rem 0;">Date</th>
+                  <th style="padding: 0.75rem 0;">Payment</th>
+                  <th style="padding: 0.75rem 0;">Fulfillment</th>
+                  <th style="padding: 0.75rem 0; text-align: right;">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {%- for order in customer.orders -%}
+                  <tr style="border-bottom: 1px solid var(--color-sand);">
+                    <td style="padding: 1rem 0;"><a href="{{ order.customer_url }}" style="font-weight: 600; text-decoration: underline;">{{ order.name }}</a></td>
+                    <td style="padding: 1rem 0; color: var(--color-text-muted);">{{ order.created_at | date: "%B %d, %Y" }}</td>
+                    <td style="padding: 1rem 0;">{{ order.financial_status_label }}</td>
+                    <td style="padding: 1rem 0;">{{ order.fulfillment_status_label }}</td>
+                    <td style="padding: 1rem 0; text-align: right; font-weight: 600;">{{ order.total_net_amount | money }}</td>
+                  </tr>
+                {%- endfor -%}
+              </tbody>
+            </table>
+          {%- else -%}
+            <div style="padding: 2rem 0; text-align: center; color: var(--color-text-muted);">
+              <p>You haven't placed any showroom orders yet.</p>
+              <a href="/collections/all" class="btn btn-outline btn-sm" style="margin-top: 1rem;">Explore Collections</a>
+            </div>
+          {%- endif -%}
+        {%- endpaginate -%}
+      </div>
+
+      <!-- Account Details & Saved Addresses -->
+      <div style="background: var(--color-white); border: var(--border-hairline); border-radius: var(--radius-subtle); padding: 2rem;">
+        <h2 class="editorial-title" style="font-size: 1.5rem; margin-bottom: 1.25rem;">Account Details</h2>
+        <div style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.8;">
+          <p><strong>{{ customer.name }}</strong></p>
+          <p>{{ customer.email }}</p>
+        </div>
+
+        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-sand);">
+          <h3 class="editorial-title" style="font-size: 1.25rem; margin-bottom: 0.75rem;">Default Address</h3>
+          {%- if customer.default_address -%}
+            <div style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.7;">
+              {{ customer.default_address | format_address }}
+            </div>
+          {%- else -%}
+            <p style="font-size: 0.875rem; color: var(--color-text-muted);">No primary address recorded.</p>
+          {%- endif -%}
+
+          <a href="/account/addresses" class="btn btn-outline btn-sm btn-full" style="margin-top: 1.5rem;">
+            Manage Addresses ({{ customer.addresses_count }})
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,172 @@
+<div class="section" style="padding-top: 2rem;">
+  <div class="container">
+    {% render 'breadcrumbs' %}
+
+    <div class="pdp-grid" style="margin-top: 1.5rem;">
+      <!-- Left Column: Image Gallery & Zoom -->
+      <div class="pdp-gallery">
+        <div class="pdp-main-image-wrap" id="PdpMainWrapper">
+          {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
+          <img src="{{ featured_image | image_url: width: 1400 }}" 
+               alt="{{ product.title | escape }}" 
+               id="PdpMainImg" 
+               loading="eager"
+               fetchpriority="high">
+        </div>
+
+        {%- if product.images.size > 1 -%}
+          <div class="pdp-thumbs">
+            {%- for image in product.images -%}
+              <div class="pdp-thumb-item {% if forloop.first %}active{% endif %}" data-image-src="{{ image | image_url: width: 1400 }}">
+                <img src="{{ image | image_url: width: 200 }}" alt="{{ product.title | escape }}" loading="lazy">
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <!-- Right Column: Product Information & Purchase -->
+      <div class="pdp-info-col">
+        <span style="font-size: 0.8125rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-bronze); font-weight: 600; margin-bottom: 0.5rem;">
+          {{ product.type | default: 'Showroom Original' }}
+        </span>
+
+        <h1 class="pdp-title editorial-title">{{ product.title }}</h1>
+
+        {%- assign variant = product.selected_or_first_available_variant -%}
+        <div class="pdp-price-row">
+          <span class="pdp-price-main" id="PdpPrice">{{ variant.price | money }}</span>
+          {%- if variant.compare_at_price > variant.price -%}
+            <span class="pdp-price-compare" id="PdpComparePrice">{{ variant.compare_at_price | money }}</span>
+            <span class="badge-sale">Sale</span>
+          {%- endif -%}
+        </div>
+
+        <div class="pdp-short-desc">
+          {{ product.description }}
+        </div>
+
+        <!-- Add to Cart Form -->
+        {% form 'product', product, id: 'ProductForm', class: 'ajax-add-form' %}
+          <input type="hidden" name="id" value="{{ variant.id }}">
+
+          <!-- Variant Selectors -->
+          {%- unless product.has_only_default_variant -%}
+            <div class="variant-picker-section">
+              {%- for option in product.options_with_values -%}
+                <div style="margin-bottom: 1.25rem;">
+                  <div class="variant-label">
+                    <span>{{ option.name }}</span>
+                    <span style="color: var(--color-text-muted); font-weight: 400;">{{ option.selected_value }}</span>
+                  </div>
+                  <div class="variant-pill-list">
+                    {%- for value in option.values -%}
+                      <button type="button" 
+                              class="variant-pill {% if option.selected_value == value %}active{% endif %}"
+                              data-option-name="{{ option.name }}"
+                              data-option-value="{{ value }}">
+                        {{ value }}
+                      </button>
+                    {%- endfor -%}
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endunless -%}
+
+          <!-- Quantity & Purchase Action Buttons -->
+          <div style="display: flex; gap: 1rem; align-items: stretch; margin-bottom: 1.25rem;">
+            <div class="qty-control" style="height: 48px;">
+              <button type="button" class="qty-btn" onclick="const input = document.getElementById('PdpQuantity'); input.value = Math.max(1, parseInt(input.value) - 1);">-</button>
+              <input type="number" id="PdpQuantity" name="quantity" class="qty-input" value="1" min="1" style="height: 100%;">
+              <button type="button" class="qty-btn" onclick="const input = document.getElementById('PdpQuantity'); input.value = parseInt(input.value) + 1;">+</button>
+            </div>
+
+            <button type="submit" name="add" class="btn btn-primary" style="flex-grow: 1; height: 48px;">
+              Add to Bag
+            </button>
+
+            <button type="button" 
+                    class="card-action-btn" 
+                    data-wishlist-toggle 
+                    data-product-id="{{ product.id }}"
+                    data-title="{{ product.title | escape }}"
+                    data-price="{{ variant.price | divided_by: 100.0 }}"
+                    data-image="{{ featured_image | image_url: width: 400 }}"
+                    data-handle="{{ product.handle }}"
+                    style="width: 48px; height: 48px; border-radius: var(--radius-subtle); flex-shrink: 0;"
+                    aria-label="Save to Wishlist"
+                    title="Add to Wishlist">
+              {% render 'icon', icon: 'heart' %}
+            </button>
+          </div>
+
+          <!-- Native Shopify Dynamic Checkout Button -->
+          {{ form | payment_button }}
+        {% endform %}
+
+        <!-- Verified Store Availability Note -->
+        <div style="margin-top: 1.5rem; padding: 1.25rem; background-color: var(--color-ivory-warm); border: 1px solid var(--color-sand); border-radius: var(--radius-subtle); font-size: 0.8125rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--color-charcoal); margin-bottom: 0.25rem;">
+            {% render 'icon', icon: 'pin' %}
+            <span>Showroom Consultation & Pickup Available</span>
+          </div>
+          <p style="color: var(--color-text-muted); margin: 0;">
+            Visit our Multan gallery on Bosan Road or contact <strong>+92 300 7490606</strong> for custom lighting specifications and direct showroom inquiries.
+          </p>
+        </div>
+
+        <!-- Metafields and Technical Specifications Accordions -->
+        <div class="pdp-meta-accordions">
+          {%- if product.metafields.lighting != blank or product.metafields.custom != blank -%}
+            <div class="accordion-item active">
+              <div class="accordion-header">
+                <span>Technical Lighting Specifications</span>
+                {% render 'icon', icon: 'chevron-down' %}
+              </div>
+              <div class="accordion-content">
+                {% render 'metafields-lighting', product: product %}
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if product.metafields.decor != blank -%}
+            <div class="accordion-item active">
+              <div class="accordion-header">
+                <span>Decor Material & Dimensions</span>
+                {% render 'icon', icon: 'chevron-down' %}
+              </div>
+              <div class="accordion-content">
+                {% render 'metafields-decor', product: product %}
+              </div>
+            </div>
+          {%- endif -%}
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Care & Maintenance</span>
+              {% render 'icon', icon: 'chevron-down' %}
+            </div>
+            <div class="accordion-content">
+              <p>For brass, iron and metallic finishes, dust regularly with a clean, dry, lint-free microfiber cloth. Avoid acidic sprays, bleach or aggressive metal polishers which can strip protective waxes and patinas. For glass globes, wipe with a lightly moistened cloth and dry immediately.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Optional Review Section: ONLY displayed if actual Shopify app is connected -->
+        {%- if product.metafields.reviews != blank -%}
+          <div class="pdp-reviews-wrap" style="margin-top: 2rem;">
+            <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Product",
+  "settings": []
+}
+{% endschema %}

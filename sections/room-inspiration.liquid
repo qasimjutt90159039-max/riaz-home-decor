@@ -1,0 +1,57 @@
+<section class="section" aria-label="Room Inspiration">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-eyebrow">Design Concepts</span>
+      <h2 class="editorial-title">{{ section.settings.title | default: 'Atmospheric Inspiration' }}</h2>
+      <p class="section-subtext">
+        Visual concepts showcasing how directional lighting, warm color temperatures and sculptural silhouettes compose cohesive interiors.
+      </p>
+    </div>
+
+    <div class="inspiration-grid">
+      <div class="inspiration-card">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Living Room Concept" loading="lazy">
+        <span class="inspiration-tag">Living Concept</span>
+      </div>
+
+      <div class="inspiration-card">
+        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" alt="Bedroom Concept" loading="lazy">
+        <span class="inspiration-tag">Bedroom Concept</span>
+      </div>
+
+      <div class="inspiration-card">
+        <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=800&q=80" alt="Dining Concept" loading="lazy">
+        <span class="inspiration-tag">Dining Concept</span>
+      </div>
+
+      <div class="inspiration-card">
+        <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" alt="Entryway Concept" loading="lazy">
+        <span class="inspiration-tag">Entryway Concept</span>
+      </div>
+    </div>
+
+    <!-- Required Non-Deceptive Disclaimer -->
+    <p class="demo-disclaimer">
+      *Note: Showroom inspiration imagery for conceptual design and spatial styling. Consult in-store for specific bespoke fixtures and custom layouts.
+    </p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Room Inspiration",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Atmospheric Inspiration"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Room Inspiration"
+    }
+  ]
+}
+{% endschema %}

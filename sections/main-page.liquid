@@ -1,0 +1,20 @@
+<div class="section" style="padding-top: 3rem;">
+  <div class="container-narrow">
+    {% render 'breadcrumbs' %}
+
+    <div style="margin: 2rem 0 2.5rem; text-align: center;">
+      <h1 class="editorial-title">{{ page.title }}</h1>
+    </div>
+
+    <div style="background: var(--color-white); border: var(--border-hairline); border-radius: var(--radius-subtle); padding: clamp(2rem, 5vw, 3.5rem); line-height: 1.8; color: var(--color-charcoal);">
+      {{ page.content }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Page",
+  "settings": []
+}
+{% endschema %}

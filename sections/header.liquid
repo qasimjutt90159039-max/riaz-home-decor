@@ -1,0 +1,272 @@
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <!-- Hamburger button for Mobile -->
+    <button type="button" class="hamburger-btn" data-mobile-menu-trigger aria-label="Open mobile navigation">
+      {% render 'icon', icon: 'menu' %}
+    </button>
+
+    <!-- Brand / Showroom Logo -->
+    <a href="/" class="header-brand">
+      <span class="brand-title">{{ section.settings.store_name | default: 'Riaz Home Decor' }}</span>
+      <span class="brand-subtitle">{{ section.settings.store_tagline | default: 'Fanoos Light & Decor' }}</span>
+    </a>
+
+    <!-- Desktop Navigation with Mega Menu -->
+    <nav class="desktop-nav" role="navigation" aria-label="Primary Navigation">
+      <div class="nav-item">
+        <a href="/" class="nav-link">Home</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="/collections/all" class="nav-link">Shop</a>
+      </div>
+
+      <!-- Lighting Mega Menu -->
+      <div class="nav-item">
+        <a href="/pages/lighting" class="nav-link">
+          Lighting
+          {% render 'icon', icon: 'chevron-down' %}
+        </a>
+        <div class="mega-menu-wrapper" role="region" aria-label="Lighting categories">
+          <div class="mega-grid">
+            <div>
+              <h3 class="mega-col-title">Lighting</h3>
+              <ul class="mega-link-list">
+                <li><a href="/collections/chandeliers" class="mega-link">Chandeliers</a></li>
+                <li><a href="/collections/fanoos" class="mega-link">Fanoos</a></li>
+                <li><a href="/collections/pendant-lights" class="mega-link">Pendant Lights</a></li>
+                <li><a href="/collections/ceiling-lights" class="mega-link">Ceiling Lights</a></li>
+                <li><a href="/collections/wall-lights" class="mega-link">Wall Lights</a></li>
+                <li><a href="/collections/table-lamps" class="mega-link">Table Lamps</a></li>
+                <li><a href="/collections/floor-lamps" class="mega-link">Floor Lamps</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="mega-col-title">Decor</h3>
+              <ul class="mega-link-list">
+                <li><a href="/collections/mirrors" class="mega-link">Mirrors</a></li>
+                <li><a href="/collections/vases" class="mega-link">Vases</a></li>
+                <li><a href="/collections/wall-decor" class="mega-link">Wall Decor</a></li>
+                <li><a href="/collections/decorative-objects" class="mega-link">Decorative Objects</a></li>
+                <li><a href="/collections/clocks" class="mega-link">Clocks</a></li>
+                <li><a href="/collections/showpieces" class="mega-link">Showpieces</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="mega-col-title">By Room</h3>
+              <ul class="mega-link-list">
+                <li><a href="/collections/living-room" class="mega-link">Living Room</a></li>
+                <li><a href="/collections/bedroom" class="mega-link">Bedroom</a></li>
+                <li><a href="/collections/dining-room" class="mega-link">Dining Room</a></li>
+                <li><a href="/collections/office" class="mega-link">Office</a></li>
+                <li><a href="/collections/entryway" class="mega-link">Entryway</a></li>
+              </ul>
+            </div>
+
+            <div class="mega-banner-card">
+              <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=700&q=80" alt="Showroom Fanoos" loading="lazy">
+              <div class="mega-banner-content">
+                <span style="font-size: 0.6875rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-sand);">Showroom Spotlight</span>
+                <h4 class="mega-banner-title">Architectural Fanoos</h4>
+                <p class="mega-banner-sub">Handcrafted illumination for modern interiors</p>
+                <a href="/collections/fanoos" class="btn btn-outline-light btn-sm" style="margin-top: 0.75rem; padding: 0.45rem 1rem; font-size: 0.75rem;">Explore Fanoos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a href="/collections/fanoos" class="nav-link">Fanoos</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="/collections/ceiling-lights" class="nav-link">Ceiling Lights</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="/collections/wall-lights" class="nav-link">Wall Lights</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="/collections/lamps" class="nav-link">Lamps</a>
+      </div>
+
+      <!-- Home Decor Mega Menu -->
+      <div class="nav-item">
+        <a href="/pages/home-decor" class="nav-link">
+          Home Decor
+          {% render 'icon', icon: 'chevron-down' %}
+        </a>
+        <div class="mega-menu-wrapper" role="region" aria-label="Home Decor categories">
+          <div class="mega-grid">
+            <div>
+              <h3 class="mega-col-title">Accents</h3>
+              <ul class="mega-link-list">
+                <li><a href="/collections/mirrors" class="mega-link">Mirrors</a></li>
+                <li><a href="/collections/vases" class="mega-link">Vases</a></li>
+                <li><a href="/collections/wall-decor" class="mega-link">Wall Decor</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="mega-col-title">Curated Objects</h3>
+              <ul class="mega-link-list">
+                <li><a href="/collections/decorative-objects" class="mega-link">Decorative Objects</a></li>
+                <li><a href="/collections/clocks" class="mega-link">Clocks</a></li>
+                <li><a href="/collections/showpieces" class="mega-link">Showpieces</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="mega-col-title">Showroom Spaces</h3>
+              <ul class="mega-link-list">
+                <li><a href="/collections/living-room" class="mega-link">Living Gallery</a></li>
+                <li><a href="/collections/dining-room" class="mega-link">Dining Atmosphere</a></li>
+                <li><a href="/collections/bedroom" class="mega-link">Bedroom Serenity</a></li>
+              </ul>
+            </div>
+            <div class="mega-banner-card">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80" alt="Home Decor Showcase" loading="lazy">
+              <div class="mega-banner-content">
+                <span style="font-size: 0.6875rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-sand);">Curated Details</span>
+                <h4 class="mega-banner-title">Modern Home Decor</h4>
+                <p class="mega-banner-sub">Sculptural accents and textured ceramics</p>
+                <a href="/pages/home-decor" class="btn btn-outline-light btn-sm" style="margin-top: 0.75rem; padding: 0.45rem 1rem; font-size: 0.75rem;">Discover Decor</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a href="/collections/all" class="nav-link">Collections</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="/pages/contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Header Actions (Search, Account, Wishlist, Cart) -->
+    <div class="header-actions">
+      <!-- Search Trigger -->
+      <button type="button" class="action-btn" data-search-trigger aria-label="Open search">
+        {% render 'icon', icon: 'search' %}
+      </button>
+
+      <!-- Customer Account Link -->
+      <a href="{% if customer %}/account{% else %}/account/login{% endif %}" class="action-btn" aria-label="Customer account">
+        {% render 'icon', icon: 'account' %}
+      </a>
+
+      <!-- Wishlist Link & Counter -->
+      <a href="/pages/wishlist" class="action-btn" aria-label="Wishlist">
+        {% render 'icon', icon: 'heart' %}
+        <span class="badge-count wishlist-count-badge" style="display: none;">0</span>
+      </a>
+
+      <!-- Cart Drawer Trigger & Counter -->
+      <button type="button" class="action-btn" data-cart-trigger aria-label="Open cart bag">
+        {% render 'icon', icon: 'cart' %}
+        <span class="badge-count cart-count-badge" style="display: none;">{{ cart.item_count | default: 0 }}</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+  <div class="mobile-nav-header">
+    <div class="header-brand">
+      <span class="brand-title" style="font-size: 1.25rem;">Riaz Home Decor</span>
+      <span class="brand-subtitle">Fanoos Light & Decor</span>
+    </div>
+    <button type="button" class="action-btn" data-mobile-menu-close aria-label="Close mobile menu">
+      {% render 'icon', icon: 'close' %}
+    </button>
+  </div>
+
+  <ul class="mobile-nav-list">
+    <li class="mobile-nav-item"><a href="/" class="mobile-nav-link">Home</a></li>
+    <li class="mobile-nav-item"><a href="/collections/all" class="mobile-nav-link">Shop All</a></li>
+    
+    <li class="mobile-nav-item">
+      <div class="mobile-nav-link" style="cursor: pointer;">
+        <span>Lighting Collection</span>
+        <span class="mobile-nav-toggle-icon">{% render 'icon', icon: 'chevron-down' %}</span>
+      </div>
+      <ul class="mobile-sub-menu">
+        <li><a href="/pages/lighting" class="mobile-sub-link">Lighting Overview</a></li>
+        <li><a href="/collections/fanoos" class="mobile-sub-link">Fanoos</a></li>
+        <li><a href="/collections/chandeliers" class="mobile-sub-link">Chandeliers</a></li>
+        <li><a href="/collections/pendant-lights" class="mobile-sub-link">Pendant Lights</a></li>
+        <li><a href="/collections/ceiling-lights" class="mobile-sub-link">Ceiling Lights</a></li>
+        <li><a href="/collections/wall-lights" class="mobile-sub-link">Wall Lights</a></li>
+        <li><a href="/collections/table-lamps" class="mobile-sub-link">Table Lamps</a></li>
+        <li><a href="/collections/floor-lamps" class="mobile-sub-link">Floor Lamps</a></li>
+      </ul>
+    </li>
+
+    <li class="mobile-nav-item">
+      <div class="mobile-nav-link" style="cursor: pointer;">
+        <span>Home Decor</span>
+        <span class="mobile-nav-toggle-icon">{% render 'icon', icon: 'chevron-down' %}</span>
+      </div>
+      <ul class="mobile-sub-menu">
+        <li><a href="/pages/home-decor" class="mobile-sub-link">Home Decor Overview</a></li>
+        <li><a href="/collections/mirrors" class="mobile-sub-link">Mirrors</a></li>
+        <li><a href="/collections/vases" class="mobile-sub-link">Vases</a></li>
+        <li><a href="/collections/wall-decor" class="mobile-sub-link">Wall Decor</a></li>
+        <li><a href="/collections/decorative-objects" class="mobile-sub-link">Decorative Objects</a></li>
+        <li><a href="/collections/clocks" class="mobile-sub-link">Clocks</a></li>
+        <li><a href="/collections/showpieces" class="mobile-sub-link">Showpieces</a></li>
+      </ul>
+    </li>
+
+    <li class="mobile-nav-item">
+      <div class="mobile-nav-link" style="cursor: pointer;">
+        <span>Shop by Room</span>
+        <span class="mobile-nav-toggle-icon">{% render 'icon', icon: 'chevron-down' %}</span>
+      </div>
+      <ul class="mobile-sub-menu">
+        <li><a href="/collections/living-room" class="mobile-sub-link">Living Room</a></li>
+        <li><a href="/collections/bedroom" class="mobile-sub-link">Bedroom</a></li>
+        <li><a href="/collections/dining-room" class="mobile-sub-link">Dining Room</a></li>
+        <li><a href="/collections/office" class="mobile-sub-link">Office</a></li>
+        <li><a href="/collections/entryway" class="mobile-sub-link">Entryway</a></li>
+      </ul>
+    </li>
+
+    <li class="mobile-nav-item"><a href="/pages/wishlist" class="mobile-nav-link">Wishlist</a></li>
+    <li class="mobile-nav-item"><a href="/pages/about" class="mobile-nav-link">About Showroom</a></li>
+    <li class="mobile-nav-item"><a href="/pages/contact" class="mobile-nav-link">Contact & Location</a></li>
+    <li class="mobile-nav-item"><a href="/pages/faq" class="mobile-nav-link">FAQ</a></li>
+  </ul>
+
+  <div style="padding: 1.5rem; margin-top: auto; border-top: var(--border-hairline); background-color: var(--color-ivory-warm); font-size: 0.8125rem; color: var(--color-text-muted);">
+    <p style="margin-bottom: 0.25rem;"><strong>Showroom Location:</strong></p>
+    <p>Bosan Road, Sabzazar Colony, Multan, Punjab, Pakistan</p>
+    <p style="margin-top: 0.5rem;"><strong>Phone:</strong> +92 300 7490606</p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "store_name",
+      "label": "Store Name",
+      "default": "Riaz Home Decor"
+    },
+    {
+      "type": "text",
+      "id": "store_tagline",
+      "label": "Store Tagline",
+      "default": "Fanoos Light & Decor"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,54 @@
+<div class="section" style="padding-top: 4rem;">
+  <div class="container-narrow" style="max-width: 520px;">
+    {% render 'breadcrumbs' %}
+
+    <div style="text-align: center; margin: 2rem 0 2.5rem;">
+      <span class="section-eyebrow">Client Portal</span>
+      <h1 class="editorial-title" style="font-size: 2.5rem;">Register Account</h1>
+      <p class="section-subtext" style="font-size: 0.95rem;">Join our showroom network for streamlined orders and project management.</p>
+    </div>
+
+    <div style="background: var(--color-white); border: var(--border-hairline); border-radius: var(--radius-subtle); padding: 2.5rem;">
+      {% form 'create_customer' %}
+        {%- if form.errors -%}
+          <div style="padding: 1rem; background-color: var(--color-terracotta-soft); border: 1px solid var(--color-terracotta); border-radius: var(--radius-subtle); margin-bottom: 1.5rem; color: var(--color-terracotta);">
+            {{ form.errors | default_errors }}
+          </div>
+        {%- endif -%}
+
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div>
+            <label for="FirstName" style="display: block; font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem;">First Name</label>
+            <input type="text" id="FirstName" name="customer[first_name]" autocomplete="given-name" style="width: 100%; padding: 0.85rem; border: 1px solid var(--color-sand-dark); border-radius: var(--radius-subtle); background: var(--color-ivory);">
+          </div>
+
+          <div>
+            <label for="LastName" style="display: block; font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem;">Last Name</label>
+            <input type="text" id="LastName" name="customer[last_name]" autocomplete="family-name" style="width: 100%; padding: 0.85rem; border: 1px solid var(--color-sand-dark); border-radius: var(--radius-subtle); background: var(--color-ivory);">
+          </div>
+
+          <div>
+            <label for="Email" style="display: block; font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem;">Email Address *</label>
+            <input type="email" id="Email" name="customer[email]" required autocomplete="email" style="width: 100%; padding: 0.85rem; border: 1px solid var(--color-sand-dark); border-radius: var(--radius-subtle); background: var(--color-ivory);">
+          </div>
+
+          <div>
+            <label for="CreatePassword" style="display: block; font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem;">Password *</label>
+            <input type="password" id="CreatePassword" name="customer[password]" required autocomplete="new-password" style="width: 100%; padding: 0.85rem; border: 1px solid var(--color-sand-dark); border-radius: var(--radius-subtle); background: var(--color-ivory);">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top: 0.5rem;">
+            Create Account
+          </button>
+        </div>
+      {% endform %}
+
+      <div style="text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-sand); font-size: 0.875rem;">
+        <span style="color: var(--color-text-muted);">Already registered?</span>
+        <a href="/account/login" style="color: var(--color-charcoal); font-weight: 600; text-decoration: underline; margin-left: 0.35rem;">
+          Sign in
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

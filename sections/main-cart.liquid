@@ -1,0 +1,81 @@
+<div class="section" style="padding-top: 3rem;">
+  <div class="container-narrow">
+    <div style="margin-bottom: 2.5rem; text-align: center;">
+      <span class="section-eyebrow">Order Review</span>
+      <h1 class="editorial-title">Your Showroom Bag</h1>
+    </div>
+
+    {%- if cart.item_count == 0 -%}
+      <div class="cart-empty-message" style="background: var(--color-white); border: var(--border-hairline); border-radius: var(--radius-subtle); padding: 4rem 2rem;">
+        <h2 class="cart-empty-title">Your space is waiting for something beautiful.</h2>
+        <p class="cart-empty-text">Your bag is currently empty. Explore our lighting galleries and home decor accents to illuminate your living space.</p>
+        <a href="/collections/all" class="btn btn-primary">Explore Collection</a>
+      </div>
+    {%- else -%}
+      <form action="/cart" method="post" id="cart" class="cart-form">
+        <div style="background: var(--color-white); border: var(--border-hairline); border-radius: var(--radius-subtle); padding: 2rem; margin-bottom: 2rem;">
+          {%- for item in cart.items -%}
+            <div class="cart-item" style="border-bottom: 1px solid var(--color-sand); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+              <div class="cart-item-image" style="width: 100px; height: 115px;">
+                <img src="{{ item.image | image_url: width: 300 }}" alt="{{ item.title | escape }}">
+              </div>
+              <div class="cart-item-details">
+                <h3 class="cart-item-title"><a href="{{ item.url }}">{{ item.product.title }}</a></h3>
+                {%- unless item.product.has_only_default_variant -%}
+                  <div class="cart-item-variant">{{ item.variant.title }}</div>
+                {%- endunless -%}
+                <div class="cart-item-price">{{ item.final_price | money }}</div>
+
+                <div class="cart-item-actions">
+                  <div class="qty-control">
+                    <button type="submit" name="update" value="update" class="qty-btn" onclick="const input = document.getElementById('updates_{{ item.key }}'); input.value = Math.max(0, parseInt(input.value) - 1);">-</button>
+                    <input type="number" name="updates[]" id="updates_{{ item.key }}" class="qty-input" value="{{ item.quantity }}" min="0">
+                    <button type="submit" name="update" value="update" class="qty-btn" onclick="const input = document.getElementById('updates_{{ item.key }}'); input.value = parseInt(input.value) + 1;">+</button>
+                  </div>
+                  <a href="/cart/change?line={{ forloop.index }}&quantity=0" class="cart-item-remove">Remove</a>
+                </div>
+              </div>
+              <div style="font-weight: 600; font-size: 1.1rem; text-align: right; min-width: 110px;">
+                {{ item.final_line_price | money }}
+              </div>
+            </div>
+          {%- endfor -%}
+
+          <!-- Cart Notes -->
+          <div style="margin-top: 1.5rem;">
+            <label for="CartNote" style="display: block; font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;">
+              Special Instructions or Delivery Notes
+            </label>
+            <textarea id="CartNote" name="note" rows="3" style="width: 100%; border: 1px solid var(--color-sand-dark); padding: 0.85rem; border-radius: var(--radius-subtle); background: var(--color-ivory); font-size: 0.875rem;">{{ cart.note }}</textarea>
+          </div>
+        </div>
+
+        <!-- Summary Row -->
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; background: var(--color-ivory-warm); padding: 2rem; border-radius: var(--radius-subtle); border: var(--border-hairline);">
+          <div>
+            <a href="/collections/all" class="btn btn-outline btn-sm">← Continue Shopping</a>
+          </div>
+          <div style="max-width: 380px; width: 100%;">
+            <div style="display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">
+              <span>Subtotal</span>
+              <span>{{ cart.total_price | money }}</span>
+            </div>
+            <p style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">
+              Shipping and taxes calculated at official checkout.
+            </p>
+            <button type="submit" name="checkout" class="btn btn-primary btn-full">
+              Proceed to Shopify Checkout
+            </button>
+          </div>
+        </div>
+      </form>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Main Cart",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,20 @@
+{
+  "name": "riaz-home-decor-shopify-theme",
+  "version": "1.0.0",
+  "description": "Premium Shopify Online Store 2.0 Theme for Riaz Home Decor Fanoos Light & Decor, Multan",
+  "main": "preview/server.js",
+  "scripts": {
+    "start": "node preview/server.js",
+    "preview": "node preview/server.js",
+    "package": "node scripts/package-theme.js"
+  },
+  "keywords": [
+    "shopify-theme",
+    "online-store-2.0",
+    "lighting-showroom",
+    "home-decor",
+    "riaz-home-decor"
+  ],
+  "author": "Riaz Home Decor Fanoos Light & Decor",
+  "license": "UNLICENSED"
+}

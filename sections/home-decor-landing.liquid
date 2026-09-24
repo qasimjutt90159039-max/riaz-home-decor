@@ -1,0 +1,103 @@
+<div class="section" style="padding-top: 3rem;">
+  <div class="container">
+    {% render 'breadcrumbs' %}
+
+    <div style="margin: 2rem 0 3.5rem; max-width: 800px;">
+      <span class="section-eyebrow">Sculptural Atmosphere</span>
+      <h1 class="editorial-title" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem;">
+        Home Decor Gallery
+      </h1>
+      <p class="section-subtext">
+        Artisanal accents that harmonize with architectural lighting—deep-framed bronze mirrors, hand-thrown ceramics, textured plaster wall reliefs, and curated stone showpieces.
+      </p>
+    </div>
+
+    <!-- Decor Editorial Grid -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+      <!-- Mirrors -->
+      <div class="product-card">
+        <div class="card-media-wrapper">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Mirrors" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-category">Reflection</span>
+          <h3 class="card-title">Mirrors</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.25rem;">Round floating frames in blackened bronze, brass rimmed mirrors, and grand entryway statements.</p>
+          <a href="/collections/mirrors" class="btn btn-outline btn-sm">Shop Mirrors →</a>
+        </div>
+      </div>
+
+      <!-- Vases -->
+      <div class="product-card">
+        <div class="card-media-wrapper">
+          <img src="https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?auto=format&fit=crop&w=800&q=80" alt="Vases" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-category">Ceramics</span>
+          <h3 class="card-title">Vases & Vessels</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.25rem;">Textured stoneware, coarse matte slips, organic handles, and earthy neutral tones.</p>
+          <a href="/collections/vases" class="btn btn-outline btn-sm">Shop Vases →</a>
+        </div>
+      </div>
+
+      <!-- Wall Decor -->
+      <div class="product-card">
+        <div class="card-media-wrapper">
+          <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" alt="Wall Decor" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-category">Artistry</span>
+          <h3 class="card-title">Wall Decor</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.25rem;">Cast plaster reliefs, wooden framed dimensional geometry, and tactile architectural artwork.</p>
+          <a href="/collections/wall-decor" class="btn btn-outline btn-sm">Shop Wall Decor →</a>
+        </div>
+      </div>
+
+      <!-- Decorative Objects -->
+      <div class="product-card">
+        <div class="card-media-wrapper">
+          <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?auto=format&fit=crop&w=800&q=80" alt="Decorative Objects" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-category">Form & Texture</span>
+          <h3 class="card-title">Decorative Objects</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.25rem;">Stone spheres, fluted pedestal dishes, and travertine tabletop accents.</p>
+          <a href="/collections/decorative-objects" class="btn btn-outline btn-sm">Shop Objects →</a>
+        </div>
+      </div>
+
+      <!-- Clocks -->
+      <div class="product-card">
+        <div class="card-media-wrapper">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" alt="Clocks" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-category">Time & Material</span>
+          <h3 class="card-title">Contemporary Clocks</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.25rem;">Natural marble blocks with brushed brass hands and silent mechanisms.</p>
+          <a href="/collections/clocks" class="btn btn-outline btn-sm">Shop Clocks →</a>
+        </div>
+      </div>
+
+      <!-- Showpieces -->
+      <div class="product-card">
+        <div class="card-media-wrapper">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Showpieces" loading="lazy">
+        </div>
+        <div class="card-content">
+          <span class="card-category">Centerpieces</span>
+          <h3 class="card-title">Showpieces</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.25rem;">Interlocking arches and sculptural composite stone figurines.</p>
+          <a href="/collections/showpieces" class="btn btn-outline btn-sm">Shop Showpieces →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Home Decor Landing",
+  "settings": []
+}
+{% endschema %}

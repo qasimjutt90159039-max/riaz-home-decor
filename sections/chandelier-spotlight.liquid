@@ -1,0 +1,78 @@
+<section class="section section-sand" aria-label="Chandelier Spotlight">
+  <div class="container">
+    <div class="spotlight-grid">
+      <!-- Left Asymmetric Large Image -->
+      <div class="spotlight-media">
+        <img src="{{ section.settings.image | default: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=85' }}" 
+             alt="Showroom Chandelier Showcase" 
+             loading="lazy">
+      </div>
+
+      <!-- Right Editorial Column -->
+      <div class="spotlight-editorial">
+        <span class="section-eyebrow">Architectural Presence</span>
+        <h2 class="editorial-title" style="font-size: clamp(2.25rem, 4vw, 3.5rem); margin-bottom: 1.5rem; line-height: 1.15;">
+          {{ section.settings.headline | default: 'Make a Statement' }}
+        </h2>
+        
+        <p class="spotlight-quote">
+          "Lighting is not merely functional—it commands the rhythm, proportion and intimacy of an entire architectural space."
+        </p>
+
+        <p class="section-subtext" style="margin-bottom: 2rem;">
+          {{ section.settings.supporting_text | default: 'Explore statement lighting for spaces that deserve a striking focal point.' }}
+        </p>
+
+        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+          <a href="{{ section.settings.collection.url | default: '/collections/chandeliers' }}" class="btn btn-primary">
+            {{ section.settings.button_text | default: 'Shop Chandeliers' }}
+          </a>
+          <a href="/pages/lighting" class="btn btn-outline">
+            View Lighting Gallery
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Chandelier Spotlight",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Make a Statement"
+    },
+    {
+      "type": "textarea",
+      "id": "supporting_text",
+      "label": "Supporting Text",
+      "default": "Explore statement lighting for spaces that deserve a striking focal point."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Chandeliers"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Chandelier Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Chandelier Spotlight"
+    }
+  ]
+}
+{% endschema %}

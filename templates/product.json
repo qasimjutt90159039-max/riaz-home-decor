@@ -1,0 +1,17 @@
+{
+  "name": "Product",
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "settings": {}
+    },
+    "related-lighting": {
+      "type": "featured-fanoos",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main-product",
+    "related-lighting"
+  ]
+}

@@ -1,0 +1,175 @@
+<section class="section" aria-label="Featured Fanoos Collection">
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1.5rem;">
+      <div style="max-width: 650px;">
+        <span class="section-eyebrow">Signature Heritage & Modernity</span>
+        <h2 class="editorial-title" style="margin-bottom: 0.75rem;">Fanoos Collection</h2>
+        <p class="section-subtext">
+          Explore decorative lighting pieces that can become a focal point in your interior.
+        </p>
+      </div>
+      <div>
+        <a href="{{ section.settings.collection.url | default: '/collections/fanoos' }}" class="btn btn-outline">
+          Explore Fanoos →
+        </a>
+      </div>
+    </div>
+
+    <!-- Dynamic Shopify Collection Grid or Demo Fallback -->
+    <div class="product-grid">
+      {%- if section.settings.collection != blank and section.settings.collection.products.size > 0 -%}
+        {%- for product in section.settings.collection.products limit: 4 -%}
+          {% render 'product-card', product: product %}
+        {%- endfor -%}
+      {%- else -%}
+        <!-- Demo Products for Theme Customizer Preview -->
+        <div class="product-card" data-id="demo-fanoos-1" data-title="Modern Fanoos Pendant" data-price="18500" data-category="Fanoos" data-room="Living Room">
+          <div class="card-media-wrapper">
+            <a href="/products/modern-fanoos-pendant">
+              <img class="card-media-primary" src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" alt="Modern Fanoos Pendant" loading="lazy">
+              <img class="card-media-secondary" src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80" alt="Modern Fanoos Pendant angle" loading="lazy">
+            </a>
+            <div class="card-badges">
+              <span class="badge-sale">Sale</span>
+            </div>
+            <div class="card-quick-actions">
+              <button type="button" class="card-action-btn" data-wishlist-toggle data-product-id="demo-fanoos-1" data-title="Modern Fanoos Pendant" data-price="18500" data-image="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" data-handle="modern-fanoos-pendant" aria-label="Add to wishlist">
+                {% render 'icon', icon: 'heart' %}
+              </button>
+              <button type="button" class="card-action-btn" data-quick-view-btn data-id="demo-fanoos-1" data-title="Modern Fanoos Pendant" data-price="18500" data-compare-price="22000" data-image="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" data-category="Fanoos" data-url="/products/modern-fanoos-pendant" aria-label="Quick view">
+                {% render 'icon', icon: 'eye' %}
+              </button>
+            </div>
+            <div class="card-quick-add-wrap">
+              <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-id="v-fanoos-1" data-title="Modern Fanoos Pendant" data-price="18500" data-image="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80">
+                + Quick Add
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Fanoos / Pendant</span>
+            <h3 class="card-title"><a href="/products/modern-fanoos-pendant">Modern Fanoos Pendant</a></h3>
+            <div class="card-price-row">
+              <span class="price-regular">PKR 18,500</span>
+              <span class="price-compare">PKR 22,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="demo-fanoos-2" data-title="Decorative Hanging Light" data-price="21000" data-category="Fanoos" data-room="Entryway">
+          <div class="card-media-wrapper">
+            <a href="/products/decorative-hanging-light">
+              <img class="card-media-primary" src="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=800&q=80" alt="Decorative Hanging Light" loading="lazy">
+              <img class="card-media-secondary" src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" alt="Decorative Hanging Light Detail" loading="lazy">
+            </a>
+            <div class="card-badges">
+              <span class="badge-sale">Sale</span>
+            </div>
+            <div class="card-quick-actions">
+              <button type="button" class="card-action-btn" data-wishlist-toggle data-product-id="demo-fanoos-2" data-title="Decorative Hanging Light" data-price="21000" data-image="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=800&q=80" data-handle="decorative-hanging-light" aria-label="Add to wishlist">
+                {% render 'icon', icon: 'heart' %}
+              </button>
+              <button type="button" class="card-action-btn" data-quick-view-btn data-id="demo-fanoos-2" data-title="Decorative Hanging Light" data-price="21000" data-compare-price="25000" data-image="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=800&q=80" data-category="Fanoos" data-url="/products/decorative-hanging-light" aria-label="Quick view">
+                {% render 'icon', icon: 'eye' %}
+              </button>
+            </div>
+            <div class="card-quick-add-wrap">
+              <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-id="v-fanoos-2" data-title="Decorative Hanging Light" data-price="21000" data-image="https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?auto=format&fit=crop&w=800&q=80">
+                + Quick Add
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Fanoos / Lantern</span>
+            <h3 class="card-title"><a href="/products/decorative-hanging-light">Decorative Hanging Light</a></h3>
+            <div class="card-price-row">
+              <span class="price-regular">PKR 21,000</span>
+              <span class="price-compare">PKR 25,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="demo-fanoos-3" data-title="Contemporary Chandelier" data-price="64000" data-category="Chandeliers" data-room="Dining Room">
+          <div class="card-media-wrapper">
+            <a href="/products/contemporary-chandelier">
+              <img class="card-media-primary" src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80" alt="Contemporary Chandelier" loading="lazy">
+              <img class="card-media-secondary" src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" alt="Contemporary Chandelier Detail" loading="lazy">
+            </a>
+            <div class="card-badges">
+              <span class="badge-tag">Featured</span>
+            </div>
+            <div class="card-quick-actions">
+              <button type="button" class="card-action-btn" data-wishlist-toggle data-product-id="demo-fanoos-3" data-title="Contemporary Chandelier" data-price="64000" data-image="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80" data-handle="contemporary-chandelier" aria-label="Add to wishlist">
+                {% render 'icon', icon: 'heart' %}
+              </button>
+              <button type="button" class="card-action-btn" data-quick-view-btn data-id="demo-fanoos-3" data-title="Contemporary Chandelier" data-price="64000" data-compare-price="75000" data-image="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80" data-category="Chandeliers" data-url="/products/contemporary-chandelier" aria-label="Quick view">
+                {% render 'icon', icon: 'eye' %}
+              </button>
+            </div>
+            <div class="card-quick-add-wrap">
+              <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-id="v-fanoos-3" data-title="Contemporary Chandelier" data-price="64000" data-image="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80">
+                + Quick Add
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Chandeliers</span>
+            <h3 class="card-title"><a href="/products/contemporary-chandelier">Contemporary Chandelier</a></h3>
+            <div class="card-price-row">
+              <span class="price-regular">PKR 64,000</span>
+              <span class="price-compare">PKR 75,000</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="demo-fanoos-4" data-title="Minimal Pendant Light" data-price="14500" data-category="Pendant Lights" data-room="Kitchen / Dining">
+          <div class="card-media-wrapper">
+            <a href="/products/minimal-pendant-light">
+              <img class="card-media-primary" src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" alt="Minimal Pendant Light" loading="lazy">
+              <img class="card-media-secondary" src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80" alt="Minimal Pendant Detail" loading="lazy">
+            </a>
+            <div class="card-quick-actions">
+              <button type="button" class="card-action-btn" data-wishlist-toggle data-product-id="demo-fanoos-4" data-title="Minimal Pendant Light" data-price="14500" data-image="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" data-handle="minimal-pendant-light" aria-label="Add to wishlist">
+                {% render 'icon', icon: 'heart' %}
+              </button>
+              <button type="button" class="card-action-btn" data-quick-view-btn data-id="demo-fanoos-4" data-title="Minimal Pendant Light" data-price="14500" data-compare-price="16500" data-image="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80" data-category="Pendant Lights" data-url="/products/minimal-pendant-light" aria-label="Quick view">
+                {% render 'icon', icon: 'eye' %}
+              </button>
+            </div>
+            <div class="card-quick-add-wrap">
+              <button type="button" class="btn btn-primary btn-sm btn-full" data-quick-add-id="v-fanoos-4" data-title="Minimal Pendant Light" data-price="14500" data-image="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80">
+                + Quick Add
+              </button>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-category">Pendant Lights</span>
+            <h3 class="card-title"><a href="/products/minimal-pendant-light">Minimal Pendant Light</a></h3>
+            <div class="card-price-row">
+              <span class="price-regular">PKR 14,500</span>
+              <span class="price-compare">PKR 16,500</span>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Fanoos",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Fanoos"
+    }
+  ]
+}
+{% endschema %}

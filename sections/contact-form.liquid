@@ -1,0 +1,107 @@
+<div class="section" style="padding-top: 3rem;">
+  <div class="container-narrow">
+    {% render 'breadcrumbs' %}
+
+    <div style="margin: 2rem 0 3rem; text-align: center;">
+      <span class="section-eyebrow">Visit or Connect</span>
+      <h1 class="editorial-title">Showroom Contact & Location</h1>
+      <p class="section-subtext" style="margin: 0 auto;">
+        We welcome you to visit our Multan showroom to view our lighting installations in person or submit an inquiry below.
+      </p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3.5rem; align-items: start;">
+      <!-- Store Details Column -->
+      <div style="background: var(--color-white); border: var(--border-hairline); border-radius: var(--radius-subtle); padding: 2.5rem;">
+        <span class="brand-subtitle">Showroom Information</span>
+        <h3 class="editorial-title" style="font-size: 1.6rem; margin: 0.5rem 0 1.5rem;">
+          Riaz Home Decor Fanoos Light & Decor
+        </h3>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div style="display: flex; gap: 1rem;">
+            <div style="flex-shrink: 0; color: var(--color-bronze);">{% render 'icon', icon: 'pin' %}</div>
+            <div>
+              <strong style="display: block; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Address</strong>
+              <span style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6;">
+                Bosan Road, Sabzazar Colony, Multan, Punjab, Pakistan
+              </span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem;">
+            <div style="flex-shrink: 0; color: var(--color-bronze);">{% render 'icon', icon: 'phone' %}</div>
+            <div>
+              <strong style="display: block; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.25rem;">Phone Number</strong>
+              <a href="tel:+923007490606" style="font-size: 1rem; color: var(--color-charcoal); font-weight: 600; text-decoration: underline;">
+                +92 300 7490606
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-sand); font-size: 0.875rem; color: var(--color-text-muted);">
+          <p>For custom residential installations or architectural volume orders, please contact our showroom directly.</p>
+        </div>
+      </div>
+
+      <!-- Contact Form Column -->
+      <div style="background: var(--color-white); border: var(--border-hairline); border-radius: var(--radius-subtle); padding: 2.5rem;">
+        <h3 class="editorial-title" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Send an Inquiry</h3>
+
+        {% form 'contact', id: 'ContactForm' %}
+          {%- if form.posted_successfully? -%}
+            <div style="padding: 1rem; background-color: var(--color-ivory-warm); border: 1px solid var(--color-bronze); border-radius: var(--radius-subtle); margin-bottom: 1.5rem; color: var(--color-charcoal);">
+              Thank you for contacting Riaz Home Decor. Our showroom team will reach back out to you promptly.
+            </div>
+          {%- elsif form.errors -%}
+            <div style="padding: 1rem; background-color: var(--color-terracotta-soft); border: 1px solid var(--color-terracotta); border-radius: var(--radius-subtle); margin-bottom: 1.5rem; color: var(--color-terracotta);">
+              {{ form.errors | default_errors }}
+            </div>
+          {%- endif -%}
+
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <label for="ContactFormName" style="display: block; font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem;">
+                Full Name *
+              </label>
+              <input type="text" id="ContactFormName" name="contact[name]" required style="width: 100%; padding: 0.85rem; border: 1px solid var(--color-sand-dark); border-radius: var(--radius-subtle); background: var(--color-ivory);">
+            </div>
+
+            <div>
+              <label for="ContactFormEmail" style="display: block; font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem;">
+                Email Address *
+              </label>
+              <input type="email" id="ContactFormEmail" name="contact[email]" required style="width: 100%; padding: 0.85rem; border: 1px solid var(--color-sand-dark); border-radius: var(--radius-subtle); background: var(--color-ivory);">
+            </div>
+
+            <div>
+              <label for="ContactFormPhone" style="display: block; font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem;">
+                Phone Number
+              </label>
+              <input type="tel" id="ContactFormPhone" name="contact[phone]" style="width: 100%; padding: 0.85rem; border: 1px solid var(--color-sand-dark); border-radius: var(--radius-subtle); background: var(--color-ivory);">
+            </div>
+
+            <div>
+              <label for="ContactFormMessage" style="display: block; font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem;">
+                Inquiry / Message *
+              </label>
+              <textarea id="ContactFormMessage" name="contact[body]" rows="5" required style="width: 100%; padding: 0.85rem; border: 1px solid var(--color-sand-dark); border-radius: var(--radius-subtle); background: var(--color-ivory);"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message
+            </button>
+          </div>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Form",
+  "settings": []
+}
+{% endschema %}

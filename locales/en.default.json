@@ -1,0 +1,37 @@
+{
+  "general": {
+    "search": {
+      "placeholder": "Search chandeliers, fanoos, wall lights, vases...",
+      "no_results": "No products found",
+      "no_results_sub": "Try another search or explore our collections."
+    },
+    "cart": {
+      "title": "Showroom Bag",
+      "empty": "Your space is waiting for something beautiful.",
+      "subtotal": "Subtotal",
+      "checkout": "Proceed to Checkout",
+      "continue_shopping": "Continue Shopping"
+    }
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to Bag",
+      "quick_add": "+ Quick Add",
+      "on_sale": "Sale",
+      "sold_out": "Currently unavailable",
+      "quantity": "Quantity",
+      "wishlist_add": "Add to Wishlist",
+      "wishlist_remove": "Remove from Wishlist"
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "message": "Message",
+      "send": "Send Message",
+      "post_success": "Thank you for contacting Riaz Home Decor. Our showroom team will reach back out to you promptly."
+    }
+  }
+}

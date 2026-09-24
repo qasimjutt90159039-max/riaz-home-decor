@@ -1,0 +1,121 @@
+{% comment %}
+  Riaz Home Decor - Lighting Metafields Snippet
+  Displays technical lighting specifications only when populated in Shopify.
+  Never invent specifications.
+{% endcomment %}
+
+{%- liquid
+  assign m = product.metafields.lighting
+  assign c = product.metafields.custom
+-%}
+
+<div class="metafields-lighting-section">
+  <table class="specs-table">
+    <tbody>
+      {%- if m.material != blank or c.material != blank -%}
+        <tr>
+          <td class="specs-label">Material</td>
+          <td class="specs-value">{{ m.material | default: c.material }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.color != blank or c.color != blank -%}
+        <tr>
+          <td class="specs-label">Color</td>
+          <td class="specs-value">{{ m.color | default: c.color }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.finish != blank or c.finish != blank -%}
+        <tr>
+          <td class="specs-label">Finish</td>
+          <td class="specs-value">{{ m.finish | default: c.finish }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.width != blank -%}
+        <tr>
+          <td class="specs-label">Width</td>
+          <td class="specs-value">{{ m.width }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.height != blank -%}
+        <tr>
+          <td class="specs-label">Height</td>
+          <td class="specs-value">{{ m.height }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.depth != blank -%}
+        <tr>
+          <td class="specs-label">Depth</td>
+          <td class="specs-value">{{ m.depth }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.weight != blank or c.weight != blank -%}
+        <tr>
+          <td class="specs-label">Weight</td>
+          <td class="specs-value">{{ m.weight | default: c.weight }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.bulb_type != blank -%}
+        <tr>
+          <td class="specs-label">Bulb Type</td>
+          <td class="specs-value">{{ m.bulb_type }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.bulb_quantity != blank -%}
+        <tr>
+          <td class="specs-label">Bulb Quantity</td>
+          <td class="specs-value">{{ m.bulb_quantity }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.wattage != blank -%}
+        <tr>
+          <td class="specs-label">Wattage</td>
+          <td class="specs-value">{{ m.wattage }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.voltage != blank -%}
+        <tr>
+          <td class="specs-label">Voltage</td>
+          <td class="specs-value">{{ m.voltage }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.light_color != blank -%}
+        <tr>
+          <td class="specs-label">Light Color Temperature</td>
+          <td class="specs-value">{{ m.light_color }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.room != blank or c.room != blank -%}
+        <tr>
+          <td class="specs-label">Recommended Room</td>
+          <td class="specs-value">{{ m.room | default: c.room }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.installation_type != blank -%}
+        <tr>
+          <td class="specs-label">Installation Type</td>
+          <td class="specs-value">{{ m.installation_type }}</td>
+        </tr>
+      {%- endif -%}
+
+      {%- if m.care_instructions != blank or c.care_instructions != blank -%}
+        <tr>
+          <td class="specs-label">Care Instructions</td>
+          <td class="specs-value">{{ m.care_instructions | default: c.care_instructions }}</td>
+        </tr>
+      {%- endif -%}
+    </tbody>
+  </table>
+</div>
